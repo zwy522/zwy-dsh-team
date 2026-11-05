@@ -1,9 +1,0 @@
-mode,decomp_mw,sa_tile_mw,merge_mw,total_dyn_mw,note
-msd_int8,5.109,0.669,2.858,8.636,window-dependent
-msd_mxfp4,5.288,0.675,0.285,6.248,window-dependent
-msd_fp4,3.592,0.469,0.252,4.313,window-dependent
-msd_fp4_true,0.013,0.044,0.023,0.080,low duty cycle
-msd_fp8,3.777,0.602,0.460,4.840,window-dependent
-msd_fp8_true_e4m3,1.400,0.044,1.110,2.554,true E4M3 input
-msd_fp8_true_e5m2,1.432,0.052,1.298,2.782,true E5M2 input
-native,0.007,0.464,0.022,0.493,1024 MAC/cycle no decomposition
