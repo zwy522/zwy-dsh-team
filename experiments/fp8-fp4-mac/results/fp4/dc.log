@@ -1,0 +1,312 @@
+Initializing gui preferences from file  /home/host/.synopsys_dv_prefs.tcl
+set Design fp4_mac
+fp4_mac
+remove_design -all
+1
+set lib_db "/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db"
+/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db
+set target_library $lib_db
+/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db
+set synthetic_library [list dw_foundation.sldb]
+dw_foundation.sldb
+set link_library [list "*" $lib_db dw_foundation.sldb]
+* /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db dw_foundation.sldb
+set search_path [list . /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs /home/synopsys/syn/O-2018.06-SP1/libraries/syn]
+. /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs /home/synopsys/syn/O-2018.06-SP1/libraries/syn
+analyze -format verilog -library WORK ./rtl/fp_mac.v
+Running PRESTO HDLC
+Compiling source file ./rtl/fp_mac.v
+Presto compilation completed successfully.
+Loading db file '/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+1
+analyze -format verilog -library WORK ./rtl/fp4_mac.v
+Running PRESTO HDLC
+Compiling source file ./rtl/fp4_mac.v
+Presto compilation completed successfully.
+1
+elaborate $Design
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp40p140ffg0p99v0c_ccs'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'fp4_mac'.
+Information: Building the design 'fp_mac' instantiated from design 'fp4_mac' with
+        the parameters "SIG_W=2,EXP_W=2,BIAS=1". (HDL-193)
+Warning:  ./rtl/fp_mac.v:45: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/fp_mac.v:52: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine fp_mac_SIG_W2_EXP_W2_BIAS1 line 67 in file
+                './rtl/fp_mac.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     prod_r_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      acc_r_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       v2_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       v1_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+current_design $Design
+Current design is 'fp4_mac'.
+{fp4_mac}
+link
+
+  Linking design 'fp4_mac'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /home/host/fp_mac/fp4_mac.db, etc
+  tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (library) /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db
+  dw_foundation.sldb (library) /home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb
+
+1
+check_design > check_design_fp4_mac.txt
+source ./synopsys_tsmc_ff.sdc
+Current design is 'fp4_mac'.
+1
+compile_ultra -timing -gate_clock
+Warning: The -timing_high_effort_script option is ignored.  (OPT-1342)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'fp4_mac'
+
+Loaded alib file './alib-52/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy u before Pass 1 (OPT-776)
+Information: Ungrouping 1 of 3 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'fp4_mac'
+Information: Added key list 'DesignWare' to design 'fp4_mac'. (DDB-72)
+ Implement Synthetic for 'fp4_mac'.
+  Processing 'fp4_mac_DW_fp_addsub_J1_0'
+  Processing 'fp4_mac_DW_lzd_J1_0'
+  Processing 'SNPS_CLOCK_GATE_HIGH_fp_mac_SIG_W2_EXP_W2_BIAS1'
+  Mapping integrated clock gating circuitry
+Memory usage for J1 task 1550 Mbytes -- main task 1550 Mbytes.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELBWP40P140' in the library 'tcbn28hpcplusbwp40p140ffg0p99v0c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP40P140' in the library 'tcbn28hpcplusbwp40p140ffg0p99v0c_ccs' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fp_mac_SIG_W2_EXP_W2_BIAS1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fp4_mac_DP_OP_32J1_122_4703_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fp4_mac_DW_fp_addsub_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fp4_mac_DW_cmp_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fp4_mac_DW01_sub_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fp4_mac_DW01_inc_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fp4_mac_DW_lzd_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fp4_mac_DP_OP_49J1_125_3163_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fp4_mac_DP_OP_50J1_126_9752_J1_0, since there are no registers. (PWR-806)
+Information: Performing clock-gating on design fp4_mac. (PWR-730)
+Information: The register 'u/prod_r_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u/prod_r_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: In design 'fp4_mac', the register 'u/prod_r_reg[28]' is removed because it is merged to 'u/prod_r_reg[29]'. (OPT-1215)
+Information: In design 'fp4_mac', the register 'u/prod_r_reg[27]' is removed because it is merged to 'u/prod_r_reg[29]'. (OPT-1215)
+Information: In design 'fp4_mac', the register 'u/prod_r_reg[26]' is removed because it is merged to 'u/prod_r_reg[29]'. (OPT-1215)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: There is no timing violation in design fp4_mac. Delay-based auto_ungroup will not be performed. (OPT-780)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:12     553.9      0.00       0.0       0.0                            379.4750
+    0:00:12     553.9      0.00       0.0       0.0                            379.4750
+    0:00:12     553.9      0.00       0.0       0.0                            379.4750
+    0:00:12     553.9      0.00       0.0       0.0                            379.4750
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:13     551.6      0.00       0.0       0.0                            376.9902
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:13     551.4      0.00       0.0       0.0                            347.1096
+    0:00:14     551.4      0.00       0.0       0.0                            347.1096
+    0:00:14     551.4      0.00       0.0       0.0                            347.1096
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14     551.4      0.00       0.0       0.0                            347.1096
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+    0:00:14     551.5      0.00       0.0       0.0                            346.6758
+    0:00:14     551.5      0.00       0.0       0.0                            346.6758
+    0:00:14     551.5      0.00       0.0       0.0                            346.6758
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14     551.4      0.00       0.0       0.0                            346.8101
+    0:00:14     551.2      0.00       0.0       0.0                            346.8932
+    0:00:14     551.2      0.00       0.0       0.0                            346.8932
+    0:00:14     551.2      0.00       0.0       0.0                            346.8932
+    0:00:15     551.2      0.00       0.0       0.0                            346.8347
+    0:00:15     551.4      0.00       0.0       0.0                            346.7005
+    0:00:15     551.4      0.00       0.0       0.0                            346.7005
+    0:00:15     551.4      0.00       0.0       0.0                            346.7005
+    0:00:15     551.4      0.00       0.0       0.0                            346.7005
+    0:00:15     551.2      0.00       0.0       0.0                            346.7502
+Loading db file '/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+report_area -nosplit -hierarchy > area_fp4_mac.txt
+report_timing -max_paths 10 > timing_fp4_mac.txt
+report_power > power_fp4_mac.txt
+report_qor > qor_fp4_mac.txt
+report_constraint -all_violators > constraints_fp4_mac.txt
+write -format verilog -hierarchy -output netlist_fp4_mac.v
+Writing verilog file '/home/host/fp_mac/netlist_fp4_mac.v'.
+1
+exit
+
+Memory usage for main task 1550 Mbytes.
+Memory usage for this session 1550 Mbytes.
+CPU usage for this session 38 seconds ( 0.01 hours ).
+
+Thank you...
+

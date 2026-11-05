@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : fp4_mac
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 19:27:05 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                           49
+Number of nets:                           891
+Number of cells:                          846
+Number of combinational cells:            802
+Number of sequential cells:                43
+Number of macros/black boxes:               0
+Number of buf/inv:                        120
+Number of references:                      46
+
+Combinational area:                454.103997
+Buf/Inv area:                       30.366000
+Noncombinational area:              97.145995
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   551.249992
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  -----------------------------------------------
+fp4_mac                            551.2500    100.0  454.1040    95.2560  0.0000  fp4_mac
+u/clk_gate_acc_r_reg                 1.8900      0.3    0.0000     1.8900  0.0000  SNPS_CLOCK_GATE_HIGH_fp_mac_SIG_W2_EXP_W2_BIAS1
+--------------------------------  ---------  -------  --------  ---------  ------  -----------------------------------------------
+Total                                                 454.1040    97.1460  0.0000
+
+1

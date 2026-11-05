@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : fp8_mac
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 19:26:17 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                           57
+Number of nets:                           989
+Number of cells:                          927
+Number of combinational cells:            876
+Number of sequential cells:                50
+Number of macros/black boxes:               0
+Number of buf/inv:                        144
+Number of references:                      49
+
+Combinational area:                506.393996
+Buf/Inv area:                       36.540001
+Noncombinational area:             113.021994
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   619.415991
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  -----------------------------------------------
+fp8_mac                            619.4160    100.0  506.3940   111.1320  0.0000  fp8_mac
+u/clk_gate_acc_r_reg                 1.8900      0.3    0.0000     1.8900  0.0000  SNPS_CLOCK_GATE_HIGH_fp_mac_SIG_W4_EXP_W4_BIAS7
+--------------------------------  ---------  -------  --------  ---------  ------  -----------------------------------------------
+Total                                                 506.3940   113.0220  0.0000
+
+1
