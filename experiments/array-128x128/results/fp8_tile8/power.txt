@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fp8_tile8
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 20:03:13 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+
+Operating Conditions: ffg0p99v0c   Library: tcbn28hpcplusbwp40p140ffg0p99v0c_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fp8_tile8              ZeroWireload      tcbn28hpcplusbwp40p140ffg0p99v0c_ccs
+fp_tile8_array_SIG_W4_EXP_W4_BIAS7
+                       ZeroWireload      tcbn28hpcplusbwp40p140ffg0p99v0c_ccs
+SNPS_CLOCK_GATE_HIGH_fp_mac_SIG_W4_EXP_W4_BIAS7_0_1
+                       ZeroWireload      tcbn28hpcplusbwp40p140ffg0p99v0c_ccs
+
+
+Global Operating Voltage = 0.99 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   4.0125 mW    (2%)
+  Net Switching Power  = 175.6310 mW   (98%)
+                         ---------
+Total Dynamic Power    = 179.6435 mW  (100%)
+
+Cell Leakage Power     =  27.6746 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  -2.2500e-02          173.9454            1.4135          173.9229 (  96.80%)
+register           2.9885            0.4311        4.7803e+03            3.4244  (   1.91%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      1.0466            1.2544        2.2893e+04            2.3239  (   1.29%)
+--------------------------------------------------------------------------------------------------
+Total              4.0125 mW       175.6309 mW     2.7675e+04 nW       179.6711 mW
+1
