@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : area
+Design : fp4_tile8
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 20:02:46 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'fp4_tile8' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                         5134
+Number of nets:                         60008
+Number of cells:                        52816
+Number of combinational cells:          50251
+Number of sequential cells:              2563
+Number of macros/black boxes:               0
+Number of buf/inv:                       6516
+Number of references:                       1
+
+Combinational area:              31815.251905
+Buf/Inv area:                     1656.774025
+Noncombinational area:            5812.505712
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 37627.757617
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  ---------------------------------------------------
+fp4_tile8                         37627.7576    100.0      0.0000     0.0000  0.0000  fp4_tile8
+u                                 37627.7576    100.0  31815.2519  5810.6157  0.0000  fp_tile8_array_SIG_W2_EXP_W2_BIAS1
+u/g_row[7].g_col[6].u_mac/clk_gate_acc_r_reg     1.8900     0.0     0.0000    1.8900 0.0000 SNPS_CLOCK_GATE_HIGH_fp_mac_SIG_W2_EXP_W2_BIAS1_0_1
+--------------------------------  ----------  -------  ----------  ---------  ------  ---------------------------------------------------
+Total                                                  31815.2519  5812.5057  0.0000
+
+1

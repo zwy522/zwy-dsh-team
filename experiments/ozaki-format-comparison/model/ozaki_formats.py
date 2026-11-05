@@ -38,11 +38,11 @@ BASES = {
                  area_factor=1.0, energy_factor=1.0, throughput_factor=1.0,
                  note="moduli near 2^8; one INT8 GEMM per modulus"),
     "FP8": dict(bits_per_modulus=9.0, gemms_per_modulus=3.0,
-                area_factor=1.20, energy_factor=1.10, throughput_factor=1.0,
-                note="p<=513; 3 FP8 GEMMs per modulus (Uchino et al.)"),
+                area_factor=1.6381, energy_factor=0.8602, throughput_factor=1.0,
+                note="p<=513; 3 FP8 GEMMs per modulus; measured MAC area/energy"),
     "FP4": dict(bits_per_modulus=6.05, gemms_per_modulus=3.95,
-                area_factor=0.90, energy_factor=0.80, throughput_factor=2.0,
-                note="base-13; ~19 moduli / 75 FP4 GEMMs at FP64 (Hayashi et al.)"),
+                area_factor=1.4578, energy_factor=0.5454, throughput_factor=2.0,
+                note="base-13; ~19 moduli / 75 FP4 GEMMs at FP64; measured MAC"),
 }
 
 
@@ -50,11 +50,18 @@ def result_bits(B: int) -> int:
     return 2 * B + GUARD
 
 
-def passes(B: int, fmt: str) -> tuple[int, float]:
+# FP8 hybrid-method simulation counts (results/fp8_pass_counts.csv);
+# FP64 keeps the paper's N=13 -> 39 GEMMs.
+FP8_Q_OVERRIDE = {"BF16": 9.0, "FP16": 12.0, "FP32": 18.0, "FP64": 39.0}
+
+
+def passes(B: int, fmt: str, target: str = "") -> tuple[int, float]:
     cfg = BASES[fmt]
     r = result_bits(B)
     m = math.ceil(r / cfg["bits_per_modulus"])
     q = m * cfg["gemms_per_modulus"]
+    if fmt == "FP8" and target in FP8_Q_OVERRIDE:
+        q = FP8_Q_OVERRIDE[target]
     return m, q
 
 
@@ -68,7 +75,7 @@ def evaluate(area_factor: float | None = None,
         tf = cfg["throughput_factor"] if throughput_factor is None else throughput_factor
         # Apply overrides only to the format being explored by the caller.
         for tname, B in TARGETS.items():
-            m, q = passes(B, name)
+            m, q = passes(B, name, tname)
             q_eff = q / tf
             area = INT8_AREA * af
             energy = INT8_ENERGY * ef
@@ -117,10 +124,11 @@ def main() -> None:
         base = {r["format"]: r for r in rows if r["target"] == target}
         print(f"  {target}: INT8=1.000 FP8={base['FP8']['cost_norm']:.3f} "
               f"FP4={base['FP4']['cost_norm']:.3f}")
-    for f4 in (0.3, 0.5, 0.72, 1.0):
+    base_f4 = 0.7951  # measured FP4 area_factor * energy_factor
+    for f4 in (0.3, 0.5, base_f4, 1.0):
         r = evaluate()  # baseline
         sel = [x for x in r if x["format"] == "FP4" and x["target"] == "FP32"][0]
-        print(f"  FP4 area*energy factor {f4:.2f} -> FP32 cost_norm ~ {f4/0.72*sel['cost_norm']:.3f}")
+        print(f"  FP4 area*energy factor {f4:.4f} -> FP32 cost_norm ~ {f4/base_f4*sel['cost_norm']:.3f}")
 
 
 if __name__ == "__main__":

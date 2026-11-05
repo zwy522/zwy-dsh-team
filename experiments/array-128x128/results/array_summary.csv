@@ -1,0 +1,4 @@
+format,tile_area_um2,lanes,area_per_lane_um2,array128_area_mm2,area_ratio_vs_int8,tile_dc_power_mw,power_per_lane_model_mw,array128_power_w_model,cp_ns,slack_ns
+INT8,23057.369358,64,360.271396,5.902687,1.000,98.4900,0.109881,1.800,1.37,2.02
+FP8,42049.727546,64,656.089493,10.764730,1.824,179.6435,0.094526,1.549,2.92,0.47
+FP4,37627.757617,64,587.933713,9.632706,1.632,177.9055,0.059931,0.982,2.84,0.55

@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : area
+Design : int8_tile8_array
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 19:57:22 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'int8_tile8_array' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                         3081
+Number of nets:                         24065
+Number of cells:                        19512
+Number of combinational cells:          15409
+Number of sequential cells:              4102
+Number of macros/black boxes:               0
+Number of buf/inv:                       2826
+Number of references:                      51
+
+Combinational area:              13754.159820
+Buf/Inv area:                      735.210009
+Noncombinational area:            9303.209539
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 23057.369358
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  ---------------------------------
+int8_tile8_array                  23057.3694    100.0  13754.1598  9301.3195  0.0000  int8_tile8_array
+g_row[7].g_col[6].u_mac/clk_gate_acc_reg     1.8900     0.0     0.0000    1.8900 0.0000 SNPS_CLOCK_GATE_HIGH_int8_mac_0_1
+--------------------------------  ----------  -------  ----------  ---------  ------  ---------------------------------
+Total                                                  13754.1598  9303.2095  0.0000
+
+1
