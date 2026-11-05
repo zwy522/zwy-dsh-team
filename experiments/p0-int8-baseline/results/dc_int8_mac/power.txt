@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : int8_mac
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 15:21:50 2026
+****************************************
+
+
+Library(s) Used:
+
+    sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c (File: /home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db)
+
+
+Operating Conditions: tt_ctypical_max_0p90v_85c   Library: sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+int8_mac               Small             sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  = 263.8581 uW   (52%)
+  Net Switching Power  = 240.9909 uW   (48%)
+                         ---------
+Total Dynamic Power    = 504.8490 uW  (100%)
+
+Cell Leakage Power     =  80.1627 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       7.3739e-02        6.4512e-02            6.7994            0.1451  (  24.79%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.1901            0.1765           73.3633            0.4400  (  75.21%)
+--------------------------------------------------------------------------------------------------
+Total              0.2639 mW         0.2410 mW        80.1627 uW         0.5850 mW
+1

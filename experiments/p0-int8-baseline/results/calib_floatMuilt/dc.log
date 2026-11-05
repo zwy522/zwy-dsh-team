@@ -1,0 +1,265 @@
+Initializing gui preferences from file  /home/host/.synopsys_dv_prefs.tcl
+set Design floatMuilt
+floatMuilt
+remove_design -all
+1
+set lib_dir "/home/host/zonghe_am3_ex/synopsys"
+/home/host/zonghe_am3_ex/synopsys
+set lib_db "$lib_dir/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db"
+/home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db
+set target_library $lib_db
+/home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db
+set link_library [list "*" $lib_db]
+* /home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db
+set search_path [list . $lib_dir]
+. /home/host/zonghe_am3_ex/synopsys
+analyze -format verilog -library WORK ./floatMuilt.v
+Running PRESTO HDLC
+Compiling source file ./floatMuilt.v
+Presto compilation completed successfully.
+Loading db file '/home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db'
+1
+elaborate $Design
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./floatMuilt.v:23: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./floatMuilt.v:86: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'floatMuilt'.
+1
+current_design $Design
+Current design is 'floatMuilt'.
+{floatMuilt}
+link
+
+  Linking design 'floatMuilt'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  floatMuilt                  /home/host/p0_int8/calib_float/floatMuilt.db
+  sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c (library) /home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db
+
+1
+set_max_delay 1.2 -from [all_inputs] -to [all_outputs]
+1
+compile_ultra
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Information: Failed to find dw_foundation.sldb in the user defined search_path, load it from 'Synopsys Root'. (UISN-70)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 10 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'floatMuilt'
+
+Loaded alib file './alib-52/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'floatMuilt'
+ Implement Synthetic for 'floatMuilt'.
+Memory usage for J1 task 294 Mbytes -- main task 294 Mbytes.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+Information: Added key list 'DesignWare' to design 'floatMuilt'. (DDB-72)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:09    3596.5      0.27       4.3       0.0                            216.3093
+  Mapping 'floatMuilt_DW_mult_uns_1'
+    0:00:13    3958.8      0.04       0.7       0.0                            238.1901
+    0:00:13    3958.8      0.04       0.7       0.0                            238.1901
+    0:00:13    3958.8      0.04       0.7       0.0                            238.1901
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:14    3148.3      0.00       0.0       0.0                            178.4517
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14    2914.6      0.00       0.0       0.0                            164.2166
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+    0:00:14    2361.1      0.00       0.0       0.0                            128.0175
+    0:00:14    2361.1      0.00       0.0       0.0                            128.0175
+    0:00:14    2361.1      0.00       0.0       0.0                            128.0175
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14    2319.2      0.00       0.0       0.0                            125.6084
+    0:00:15    1744.5      0.00       0.0       0.0                             99.7811
+    0:00:15    1744.5      0.00       0.0       0.0                             99.7811
+    0:00:15    1744.5      0.00       0.0       0.0                             99.7811
+    0:00:15    1738.1      0.00       0.0       0.0                             98.6588
+    0:00:15    1711.1      0.00       0.0       0.0                             94.0883
+    0:00:15    1711.1      0.00       0.0       0.0                             94.0883
+    0:00:15    1711.1      0.00       0.0       0.0                             94.0883
+    0:00:15    1711.1      0.00       0.0       0.0                             94.0883
+    0:00:15    1653.1      0.00       0.0       0.0                             93.0871
+Loading db file '/home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: No single bit degenerate for multibit library cell 'DFFSQNLA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFSQNL2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFSQNA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFSQLA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFSQL2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFSQAA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFRPQNLA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFRPQNL2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFRPQNAA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFRPQLA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFRPQL2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFRPQAA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFQNLA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFQNL2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFQNAA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFQLA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFQL2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Warning: No single bit degenerate for multibit library cell 'DFFQAA2W_X1M_A12PP140ZTR_C30'. (OPT-914)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+1
+report_area -nosplit > area.txt
+report_timing -max_paths 5 > timing.txt
+exit
+
+Memory usage for main task 363 Mbytes.
+Memory usage for this session 363 Mbytes.
+CPU usage for this session 64 seconds ( 0.02 hours ).
+
+Thank you...
+

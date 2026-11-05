@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : int8_mac
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 15:21:50 2026
+****************************************
+
+
+   min_delay/hold ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   clear_s2_reg/D               0.11           0.11 f         0.00  (VIOLATED: increase significant digits)
+   v_s2_reg/D                   0.11           0.11 f         0.00  (VIOLATED: increase significant digits)
+
+
+1
