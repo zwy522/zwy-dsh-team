@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : area
+Design : int8_array_n4
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 15:22:08 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c (File: /home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db)
+
+Number of ports:                          606
+Number of nets:                          3683
+Number of cells:                         3214
+Number of combinational cells:           2930
+Number of sequential cells:               279
+Number of macros/black boxes:               0
+Number of buf/inv:                        489
+Number of references:                       2
+
+Combinational area:               3697.848018
+Buf/Inv area:                     1832.040046
+Noncombinational area:            1149.287951
+Macro/Black Box area:                0.000000
+Net Interconnect area:               0.000000
+
+Total cell area:                  4847.135968
+Total area:                       4847.135968
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------
+int8_array_n4                     4847.1360    100.0   104.3280     0.0000  0.0000  int8_array_n4
+u_array                           4742.8080     97.8     0.0000     0.0000  0.0000  int8_array_N4_ACC_W32
+u_array/g_lane[0].u_mac           1281.3360     26.4   990.6960   290.6400  0.0000  int8_mac_ACC_W32_3
+u_array/g_lane[1].u_mac           1158.8640     23.9   872.0880   286.7760  0.0000  int8_mac_ACC_W32_2
+u_array/g_lane[2].u_mac           1158.1920     23.9   872.2560   285.9360  0.0000  int8_mac_ACC_W32_1
+u_array/g_lane[3].u_mac           1144.4160     23.6   858.4800   285.9360  0.0000  int8_mac_ACC_W32_0
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------
+Total                                                 3697.8480  1149.2880  0.0000
+
+1

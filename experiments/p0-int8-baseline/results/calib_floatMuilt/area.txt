@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : floatMuilt
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 15:23:39 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c (File: /home/host/zonghe_am3_ex/synopsys/sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c.db)
+
+Number of ports:                           48
+Number of nets:                          1108
+Number of cells:                         1076
+Number of combinational cells:           1076
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                         77
+Number of references:                      59
+
+Combinational area:               1653.119992
+Buf/Inv area:                      284.760008
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:               0.000000
+
+Total cell area:                  1653.119992
+Total area:                       1653.119992
+1

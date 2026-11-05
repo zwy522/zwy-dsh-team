@@ -1,0 +1,355 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : floatMuilt
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 15:23:39 2026
+****************************************
+
+Operating Conditions: tt_ctypical_max_0p90v_85c   Library: sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+Wire Load Model Mode: top
+
+  Startpoint: floatA[5] (input port)
+  Endpoint: product[4] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  floatMuilt         Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  floatA[5] (in)                                          0.00       0.00 f
+  U639/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.02 r
+  U530/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       0.04 f
+  U989/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.04       0.09 r
+  U526/Y (AND2_X8TM_A12PP140ZTR_C30)                      0.03       0.12 r
+  U303/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.02       0.14 f
+  U719/Y (NAND2_X8TA_A12PP140ZTR_C30)                     0.02       0.16 r
+  U716/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.19 f
+  U755/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.02       0.21 r
+  U708/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.24 f
+  U505/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       0.26 r
+  U959/Y (AND2_X4TM_A12PP140ZTR_C30)                      0.04       0.30 r
+  U375/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.03       0.33 f
+  U835/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.02       0.36 r
+  U496/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.39 f
+  U338/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.41 r
+  U686/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.45 f
+  U336/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.47 r
+  U370/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.50 f
+  U557/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.52 r
+  U483/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.55 f
+  U330/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.03       0.58 r
+  U251/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.04       0.61 f
+  U328/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.64 r
+  U548/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.66 f
+  U476/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.69 r
+  U543/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.03       0.72 f
+  U467/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.02       0.75 r
+  U466/Y (AOI21_X6A_A12PP140ZTR_C30)                      0.03       0.77 f
+  U1149/Y (OAI21_X11M_A12PP140ZTR_C30)                    0.03       0.80 r
+  U1169/Y (AOI21_X11A_A12PP140ZTR_C30)                    0.03       0.83 f
+  U944/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.03       0.86 r
+  U766/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.88 f
+  U322/Y (NOR2_X1TA_A12PP140ZTR_C30)                      0.08       0.96 r
+  U645/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.05       1.01 f
+  U1184/Y (INV_X20B_A12PP140ZTR_C30)                      0.02       1.03 r
+  U960/Y (NAND2_X11TA_A12PP140ZTR_C30)                    0.03       1.05 f
+  U1194/Y (INV_X20B_A12PP140ZTR_C30)                      0.01       1.07 r
+  U215/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       1.09 f
+  U1218/Y (NOR2_X8TA_A12PP140ZTR_C30)                     0.02       1.11 r
+  U947/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       1.13 f
+  U760/Y (OR2_X11TM_A12PP140ZTR_C30)                      0.04       1.17 f
+  U1263/Y (NOR2_X2TA_A12PP140ZTR_C30)                     0.02       1.20 r
+  product[4] (out)                                        0.00       1.20 r
+  data arrival time                                                  1.20
+
+  max_delay                                               1.20       1.20
+  output external delay                                   0.00       1.20
+  data required time                                                 1.20
+  --------------------------------------------------------------------------
+  data required time                                                 1.20
+  data arrival time                                                 -1.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: floatA[5] (input port)
+  Endpoint: product[3] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  floatMuilt         Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  floatA[5] (in)                                          0.00       0.00 f
+  U639/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.02 r
+  U530/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       0.04 f
+  U989/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.04       0.09 r
+  U526/Y (AND2_X8TM_A12PP140ZTR_C30)                      0.03       0.12 r
+  U303/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.02       0.14 f
+  U719/Y (NAND2_X8TA_A12PP140ZTR_C30)                     0.02       0.16 r
+  U716/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.19 f
+  U755/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.02       0.21 r
+  U708/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.24 f
+  U505/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       0.26 r
+  U959/Y (AND2_X4TM_A12PP140ZTR_C30)                      0.04       0.30 r
+  U375/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.03       0.33 f
+  U835/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.02       0.36 r
+  U496/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.39 f
+  U338/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.41 r
+  U686/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.45 f
+  U336/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.47 r
+  U370/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.50 f
+  U557/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.52 r
+  U483/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.55 f
+  U330/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.03       0.58 r
+  U251/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.04       0.61 f
+  U328/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.64 r
+  U548/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.66 f
+  U476/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.69 r
+  U543/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.03       0.72 f
+  U467/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.02       0.75 r
+  U466/Y (AOI21_X6A_A12PP140ZTR_C30)                      0.03       0.77 f
+  U1149/Y (OAI21_X11M_A12PP140ZTR_C30)                    0.03       0.80 r
+  U1169/Y (AOI21_X11A_A12PP140ZTR_C30)                    0.03       0.83 f
+  U944/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.03       0.86 r
+  U766/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.88 f
+  U322/Y (NOR2_X1TA_A12PP140ZTR_C30)                      0.08       0.96 r
+  U645/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.05       1.01 f
+  U1184/Y (INV_X20B_A12PP140ZTR_C30)                      0.02       1.03 r
+  U960/Y (NAND2_X11TA_A12PP140ZTR_C30)                    0.03       1.05 f
+  U1194/Y (INV_X20B_A12PP140ZTR_C30)                      0.01       1.07 r
+  U215/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       1.09 f
+  U1218/Y (NOR2_X8TA_A12PP140ZTR_C30)                     0.02       1.11 r
+  U947/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       1.13 f
+  U760/Y (OR2_X11TM_A12PP140ZTR_C30)                      0.04       1.17 f
+  U1261/Y (NOR2_X2TA_A12PP140ZTR_C30)                     0.02       1.20 r
+  product[3] (out)                                        0.00       1.20 r
+  data arrival time                                                  1.20
+
+  max_delay                                               1.20       1.20
+  output external delay                                   0.00       1.20
+  data required time                                                 1.20
+  --------------------------------------------------------------------------
+  data required time                                                 1.20
+  data arrival time                                                 -1.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: floatA[5] (input port)
+  Endpoint: product[2] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  floatMuilt         Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  floatA[5] (in)                                          0.00       0.00 f
+  U639/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.02 r
+  U530/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       0.04 f
+  U989/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.04       0.09 r
+  U526/Y (AND2_X8TM_A12PP140ZTR_C30)                      0.03       0.12 r
+  U303/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.02       0.14 f
+  U719/Y (NAND2_X8TA_A12PP140ZTR_C30)                     0.02       0.16 r
+  U716/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.19 f
+  U755/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.02       0.21 r
+  U708/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.24 f
+  U505/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       0.26 r
+  U959/Y (AND2_X4TM_A12PP140ZTR_C30)                      0.04       0.30 r
+  U375/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.03       0.33 f
+  U835/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.02       0.36 r
+  U496/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.39 f
+  U338/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.41 r
+  U686/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.45 f
+  U336/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.47 r
+  U370/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.50 f
+  U557/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.52 r
+  U483/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.55 f
+  U330/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.03       0.58 r
+  U251/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.04       0.61 f
+  U328/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.64 r
+  U548/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.66 f
+  U476/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.69 r
+  U543/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.03       0.72 f
+  U467/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.02       0.75 r
+  U466/Y (AOI21_X6A_A12PP140ZTR_C30)                      0.03       0.77 f
+  U1149/Y (OAI21_X11M_A12PP140ZTR_C30)                    0.03       0.80 r
+  U1169/Y (AOI21_X11A_A12PP140ZTR_C30)                    0.03       0.83 f
+  U944/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.03       0.86 r
+  U766/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.88 f
+  U322/Y (NOR2_X1TA_A12PP140ZTR_C30)                      0.08       0.96 r
+  U645/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.05       1.01 f
+  U1184/Y (INV_X20B_A12PP140ZTR_C30)                      0.02       1.03 r
+  U960/Y (NAND2_X11TA_A12PP140ZTR_C30)                    0.03       1.05 f
+  U1194/Y (INV_X20B_A12PP140ZTR_C30)                      0.01       1.07 r
+  U215/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       1.09 f
+  U1218/Y (NOR2_X8TA_A12PP140ZTR_C30)                     0.02       1.11 r
+  U947/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       1.13 f
+  U760/Y (OR2_X11TM_A12PP140ZTR_C30)                      0.04       1.17 f
+  U1259/Y (NOR2_X2TA_A12PP140ZTR_C30)                     0.02       1.20 r
+  product[2] (out)                                        0.00       1.20 r
+  data arrival time                                                  1.20
+
+  max_delay                                               1.20       1.20
+  output external delay                                   0.00       1.20
+  data required time                                                 1.20
+  --------------------------------------------------------------------------
+  data required time                                                 1.20
+  data arrival time                                                 -1.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: floatA[5] (input port)
+  Endpoint: product[1] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  floatMuilt         Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  floatA[5] (in)                                          0.00       0.00 f
+  U639/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.02 r
+  U530/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       0.04 f
+  U989/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.04       0.09 r
+  U526/Y (AND2_X8TM_A12PP140ZTR_C30)                      0.03       0.12 r
+  U303/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.02       0.14 f
+  U719/Y (NAND2_X8TA_A12PP140ZTR_C30)                     0.02       0.16 r
+  U716/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.19 f
+  U755/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.02       0.21 r
+  U708/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.24 f
+  U505/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       0.26 r
+  U959/Y (AND2_X4TM_A12PP140ZTR_C30)                      0.04       0.30 r
+  U375/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.03       0.33 f
+  U835/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.02       0.36 r
+  U496/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.39 f
+  U338/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.41 r
+  U686/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.45 f
+  U336/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.47 r
+  U370/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.50 f
+  U557/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.52 r
+  U483/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.55 f
+  U330/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.03       0.58 r
+  U251/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.04       0.61 f
+  U328/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.64 r
+  U548/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.66 f
+  U476/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.69 r
+  U543/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.03       0.72 f
+  U467/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.02       0.75 r
+  U466/Y (AOI21_X6A_A12PP140ZTR_C30)                      0.03       0.77 f
+  U1149/Y (OAI21_X11M_A12PP140ZTR_C30)                    0.03       0.80 r
+  U1169/Y (AOI21_X11A_A12PP140ZTR_C30)                    0.03       0.83 f
+  U944/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.03       0.86 r
+  U766/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.88 f
+  U322/Y (NOR2_X1TA_A12PP140ZTR_C30)                      0.08       0.96 r
+  U645/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.05       1.01 f
+  U1184/Y (INV_X20B_A12PP140ZTR_C30)                      0.02       1.03 r
+  U960/Y (NAND2_X11TA_A12PP140ZTR_C30)                    0.03       1.05 f
+  U1194/Y (INV_X20B_A12PP140ZTR_C30)                      0.01       1.07 r
+  U215/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       1.09 f
+  U1218/Y (NOR2_X8TA_A12PP140ZTR_C30)                     0.02       1.11 r
+  U947/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       1.13 f
+  U760/Y (OR2_X11TM_A12PP140ZTR_C30)                      0.04       1.17 f
+  U1253/Y (NOR2_X2TA_A12PP140ZTR_C30)                     0.02       1.20 r
+  product[1] (out)                                        0.00       1.20 r
+  data arrival time                                                  1.20
+
+  max_delay                                               1.20       1.20
+  output external delay                                   0.00       1.20
+  data required time                                                 1.20
+  --------------------------------------------------------------------------
+  data required time                                                 1.20
+  data arrival time                                                 -1.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: floatA[5] (input port)
+  Endpoint: product[0] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  floatMuilt         Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  floatA[5] (in)                                          0.00       0.00 f
+  U639/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.02 r
+  U530/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       0.04 f
+  U989/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.04       0.09 r
+  U526/Y (AND2_X8TM_A12PP140ZTR_C30)                      0.03       0.12 r
+  U303/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.02       0.14 f
+  U719/Y (NAND2_X8TA_A12PP140ZTR_C30)                     0.02       0.16 r
+  U716/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.19 f
+  U755/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.02       0.21 r
+  U708/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.24 f
+  U505/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       0.26 r
+  U959/Y (AND2_X4TM_A12PP140ZTR_C30)                      0.04       0.30 r
+  U375/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.03       0.33 f
+  U835/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.02       0.36 r
+  U496/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.39 f
+  U338/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.41 r
+  U686/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.45 f
+  U336/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.47 r
+  U370/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.50 f
+  U557/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.52 r
+  U483/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.03       0.55 f
+  U330/Y (NAND2_X2TA_A12PP140ZTR_C30)                     0.03       0.58 r
+  U251/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.04       0.61 f
+  U328/Y (NAND2_X6TA_A12PP140ZTR_C30)                     0.02       0.64 r
+  U548/Y (NAND2_X3TA_A12PP140ZTR_C30)                     0.03       0.66 f
+  U476/Y (NAND2_X4TA_A12PP140ZTR_C30)                     0.03       0.69 r
+  U543/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.03       0.72 f
+  U467/Y (NOR2_X11A_A12PP140ZTR_C30)                      0.02       0.75 r
+  U466/Y (AOI21_X6A_A12PP140ZTR_C30)                      0.03       0.77 f
+  U1149/Y (OAI21_X11M_A12PP140ZTR_C30)                    0.03       0.80 r
+  U1169/Y (AOI21_X11A_A12PP140ZTR_C30)                    0.03       0.83 f
+  U944/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.03       0.86 r
+  U766/Y (NOR2_X4TA_A12PP140ZTR_C30)                      0.02       0.88 f
+  U322/Y (NOR2_X1TA_A12PP140ZTR_C30)                      0.08       0.96 r
+  U645/Y (OAI21_X8A_A12PP140ZTR_C30)                      0.05       1.01 f
+  U1184/Y (INV_X20B_A12PP140ZTR_C30)                      0.02       1.03 r
+  U960/Y (NAND2_X11TA_A12PP140ZTR_C30)                    0.03       1.05 f
+  U1194/Y (INV_X20B_A12PP140ZTR_C30)                      0.01       1.07 r
+  U215/Y (NAND2_X11B_A12PP140ZTR_C30)                     0.02       1.09 f
+  U1218/Y (NOR2_X8TA_A12PP140ZTR_C30)                     0.02       1.11 r
+  U947/Y (NOR2_X6TA_A12PP140ZTR_C30)                      0.02       1.13 f
+  U760/Y (OR2_X11TM_A12PP140ZTR_C30)                      0.04       1.17 f
+  U759/Y (NOR2_X2TA_A12PP140ZTR_C30)                      0.02       1.20 r
+  product[0] (out)                                        0.00       1.20 r
+  data arrival time                                                  1.20
+
+  max_delay                                               1.20       1.20
+  output external delay                                   0.00       1.20
+  data required time                                                 1.20
+  --------------------------------------------------------------------------
+  data required time                                                 1.20
+  data arrival time                                                 -1.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

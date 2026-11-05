@@ -1,0 +1,1135 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : int8_array_n4
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 15:22:08 2026
+****************************************
+
+Operating Conditions: tt_ctypical_max_0p90v_85c   Library: sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+Wire Load Model Mode: top
+
+  Startpoint: u_array/g_lane[0].u_mac/prod_ext_s2_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[0].u_mac/acc_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[0].u_mac/prod_ext_s2_reg[0]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[0].u_mac/prod_ext_s2_reg[0]/Q (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.11       0.16 f
+  u_array/g_lane[0].u_mac/U555/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.11       0.28 r
+  u_array/g_lane[0].u_mac/U137/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.14       0.42 f
+  u_array/g_lane[0].u_mac/U557/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.07       0.49 f
+  u_array/g_lane[0].u_mac/U102/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.07       0.56 r
+  u_array/g_lane[0].u_mac/U134/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.12       0.68 f
+  u_array/g_lane[0].u_mac/U43/Y (AND2_X1P4TM_A12PP140ZTR_C30)
+                                                          0.06       0.74 f
+  u_array/g_lane[0].u_mac/U87/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.07       0.81 r
+  u_array/g_lane[0].u_mac/U130/Y (OAI21_X3A_A12PP140ZTR_C30)
+                                                          0.09       0.90 f
+  u_array/g_lane[0].u_mac/U169/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       0.91 r
+  u_array/g_lane[0].u_mac/U311/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       0.95 f
+  u_array/g_lane[0].u_mac/U37/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.08       1.03 r
+  u_array/g_lane[0].u_mac/U36/Y (OAI21_X4A_A12PP140ZTR_C30)
+                                                          0.07       1.10 f
+  u_array/g_lane[0].u_mac/U156/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.12 r
+  u_array/g_lane[0].u_mac/U561/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       1.15 f
+  u_array/g_lane[0].u_mac/U73/Y (OAI22_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.21 r
+  u_array/g_lane[0].u_mac/U72/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.10       1.31 f
+  u_array/g_lane[0].u_mac/U5/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.33 r
+  u_array/g_lane[0].u_mac/U71/Y (NOR2_X2TA_A12PP140ZTR_C30)
+                                                          0.03       1.35 f
+  u_array/g_lane[0].u_mac/U70/Y (OAI22_X3A_A12PP140ZTR_C30)
+                                                          0.05       1.41 r
+  u_array/g_lane[0].u_mac/U69/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.10       1.51 f
+  u_array/g_lane[0].u_mac/U146/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.52 r
+  u_array/g_lane[0].u_mac/U564/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       1.56 f
+  u_array/g_lane[0].u_mac/U68/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.07       1.63 r
+  u_array/g_lane[0].u_mac/U310/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.11       1.74 f
+  u_array/g_lane[0].u_mac/U142/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.76 r
+  u_array/g_lane[0].u_mac/U4/Y (NOR2_X2TA_A12PP140ZTR_C30)
+                                                          0.02       1.78 f
+  u_array/g_lane[0].u_mac/U67/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.05       1.83 r
+  u_array/g_lane[0].u_mac/U35/Y (OAI21_X4A_A12PP140ZTR_C30)
+                                                          0.06       1.90 f
+  u_array/g_lane[0].u_mac/U34/Y (AND2_X3TM_A12PP140ZTR_C30)
+                                                          0.04       1.94 f
+  u_array/g_lane[0].u_mac/U65/Y (OAI22_X4A_A12PP140ZTR_C30)
+                                                          0.04       1.97 r
+  u_array/g_lane[0].u_mac/U64/Y (OAI21_X4A_A12PP140ZTR_C30)
+                                                          0.06       2.03 f
+  u_array/g_lane[0].u_mac/U358/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.08 f
+  u_array/g_lane[0].u_mac/U63/Y (OAI22_X3A_A12PP140ZTR_C30)
+                                                          0.05       2.13 r
+  u_array/g_lane[0].u_mac/U62/Y (OAI21_X6A_A12PP140ZTR_C30)
+                                                          0.05       2.18 f
+  u_array/g_lane[0].u_mac/U3/Y (AND2_X4TM_A12PP140ZTR_C30)
+                                                          0.03       2.22 f
+  u_array/g_lane[0].u_mac/U59/Y (OAI22_X4A_A12PP140ZTR_C30)
+                                                          0.03       2.25 r
+  u_array/g_lane[0].u_mac/U57/Y (OAI21_X3A_A12PP140ZTR_C30)
+                                                          0.07       2.32 f
+  u_array/g_lane[0].u_mac/U56/Y (AND2_X3TM_A12PP140ZTR_C30)
+                                                          0.04       2.36 f
+  u_array/g_lane[0].u_mac/U55/Y (OAI22_X4A_A12PP140ZTR_C30)
+                                                          0.04       2.40 r
+  u_array/g_lane[0].u_mac/U54/Y (OAI21_X6A_A12PP140ZTR_C30)
+                                                          0.05       2.44 f
+  u_array/g_lane[0].u_mac/U570/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.05       2.49 f
+  u_array/g_lane[0].u_mac/U51/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.55 r
+  u_array/g_lane[0].u_mac/U49/Y (OAI21_X6A_A12PP140ZTR_C30)
+                                                          0.05       2.61 f
+  u_array/g_lane[0].u_mac/U357/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.66 f
+  u_array/g_lane[0].u_mac/U48/Y (OAI22_X4A_A12PP140ZTR_C30)
+                                                          0.04       2.70 r
+  u_array/g_lane[0].u_mac/U47/Y (OAI21_X4A_A12PP140ZTR_C30)
+                                                          0.05       2.76 f
+  u_array/g_lane[0].u_mac/U302/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.05       2.81 f
+  u_array/g_lane[0].u_mac/U119/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.07       2.88 r
+  u_array/g_lane[0].u_mac/U304/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.11       2.99 f
+  u_array/g_lane[0].u_mac/U688/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.01       3.00 r
+  u_array/g_lane[0].u_mac/U690/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.06 f
+  u_array/g_lane[0].u_mac/U691/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       3.11 r
+  u_array/g_lane[0].u_mac/U114/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.07       3.17 f
+  u_array/g_lane[0].u_mac/U113/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.06       3.23 r
+  u_array/g_lane[0].u_mac/U692/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.30 f
+  u_array/g_lane[0].u_mac/acc_reg[31]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.30 f
+  data arrival time                                                  3.30
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[0].u_mac/acc_reg[31]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.03       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.30
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_array/g_lane[3].u_mac/a_s1_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[3].u_mac/prod_ext_s2_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[3].u_mac/a_s1_reg[5]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[3].u_mac/a_s1_reg[5]/Q (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.31       0.36 f
+  u_array/g_lane[3].u_mac/U298/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.29       0.65 r
+  u_array/g_lane[3].u_mac/U122/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       0.73 f
+  u_array/g_lane[3].u_mac/U214/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.12       0.86 r
+  u_array/g_lane[3].u_mac/U167/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.05       0.90 f
+  u_array/g_lane[3].u_mac/U77/Y (OAI21_X0P7A_A12PP140ZTR_C30)
+                                                          0.05       0.95 r
+  u_array/g_lane[3].u_mac/U16/Y (AOI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.08       1.03 f
+  u_array/g_lane[3].u_mac/U20/Y (AOI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.26       1.29 r
+  u_array/g_lane[3].u_mac/U236/Y (OR2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       1.35 r
+  u_array/g_lane[3].u_mac/U66/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.08       1.44 f
+  u_array/g_lane[3].u_mac/U438/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.05       1.49 r
+  u_array/g_lane[3].u_mac/U113/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.17       1.66 f
+  u_array/g_lane[3].u_mac/U138/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.01       1.67 r
+  u_array/g_lane[3].u_mac/U439/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.08       1.75 f
+  u_array/g_lane[3].u_mac/U440/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.05       1.80 r
+  u_array/g_lane[3].u_mac/U107/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       1.90 f
+  u_array/g_lane[3].u_mac/U441/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.05       1.95 r
+  u_array/g_lane[3].u_mac/U442/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.17       2.12 f
+  u_array/g_lane[3].u_mac/U128/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       2.14 r
+  u_array/g_lane[3].u_mac/U443/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       2.18 f
+  u_array/g_lane[3].u_mac/U58/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       2.25 r
+  u_array/g_lane[3].u_mac/U125/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       2.28 f
+  u_array/g_lane[3].u_mac/U454/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.03       2.31 r
+  u_array/g_lane[3].u_mac/U455/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.10       2.41 f
+  u_array/g_lane[3].u_mac/U461/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       2.47 r
+  u_array/g_lane[3].u_mac/U462/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.09       2.56 f
+  u_array/g_lane[3].u_mac/U101/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.63 f
+  u_array/g_lane[3].u_mac/U53/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.68 r
+  u_array/g_lane[3].u_mac/U467/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.09       2.78 f
+  u_array/g_lane[3].u_mac/U99/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.84 f
+  u_array/g_lane[3].u_mac/U471/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.93 r
+  u_array/g_lane[3].u_mac/U472/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.13       3.05 f
+  u_array/g_lane[3].u_mac/U124/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.01       3.07 r
+  u_array/g_lane[3].u_mac/U96/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.08       3.14 f
+  u_array/g_lane[3].u_mac/U349/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.20 r
+  u_array/g_lane[3].u_mac/U33/Y (OAI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.09       3.29 f
+  u_array/g_lane[3].u_mac/prod_ext_s2_reg[14]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.29 f
+  data arrival time                                                  3.29
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[3].u_mac/prod_ext_s2_reg[14]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.04       3.29
+  data required time                                                 3.29
+  --------------------------------------------------------------------------
+  data required time                                                 3.29
+  data arrival time                                                 -3.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_array/g_lane[3].u_mac/acc_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[3].u_mac/acc_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[3].u_mac/acc_reg[0]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[3].u_mac/acc_reg[0]/Q (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.16       0.21 r
+  u_array/g_lane[3].u_mac/U95/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.16       0.37 f
+  u_array/g_lane[3].u_mac/U52/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.09       0.46 r
+  u_array/g_lane[3].u_mac/U242/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       0.52 f
+  u_array/g_lane[3].u_mac/U6/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.10       0.62 r
+  u_array/g_lane[3].u_mac/U51/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.07       0.69 f
+  u_array/g_lane[3].u_mac/U50/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       0.75 r
+  u_array/g_lane[3].u_mac/U49/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.07       0.82 f
+  u_array/g_lane[3].u_mac/U240/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.05       0.86 r
+  u_array/g_lane[3].u_mac/U238/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.08       0.94 f
+  u_array/g_lane[3].u_mac/U46/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.00 r
+  u_array/g_lane[3].u_mac/U45/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.07 f
+  u_array/g_lane[3].u_mac/U44/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.12 r
+  u_array/g_lane[3].u_mac/U43/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.19 f
+  u_array/g_lane[3].u_mac/U42/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.24 r
+  u_array/g_lane[3].u_mac/U41/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.30 f
+  u_array/g_lane[3].u_mac/U108/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       1.40 r
+  u_array/g_lane[3].u_mac/U106/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.14       1.53 f
+  u_array/g_lane[3].u_mac/U275/Y (OR2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       1.59 f
+  u_array/g_lane[3].u_mac/U274/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       1.65 r
+  u_array/g_lane[3].u_mac/U105/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.12       1.77 f
+  u_array/g_lane[3].u_mac/U18/Y (OAI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.18       1.94 r
+  u_array/g_lane[3].u_mac/U104/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.16       2.10 f
+  u_array/g_lane[3].u_mac/U103/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.12       2.22 r
+  u_array/g_lane[3].u_mac/U102/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.14       2.36 f
+  u_array/g_lane[3].u_mac/U57/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       2.43 r
+  u_array/g_lane[3].u_mac/U40/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.51 f
+  u_array/g_lane[3].u_mac/U56/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.57 r
+  u_array/g_lane[3].u_mac/U39/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.65 f
+  u_array/g_lane[3].u_mac/U54/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.71 r
+  u_array/g_lane[3].u_mac/U38/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       2.79 f
+  u_array/g_lane[3].u_mac/U100/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.10       2.88 r
+  u_array/g_lane[3].u_mac/U98/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       2.99 f
+  u_array/g_lane[3].u_mac/U276/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.07       3.06 r
+  u_array/g_lane[3].u_mac/U744/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.12 f
+  u_array/g_lane[3].u_mac/U745/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       3.16 r
+  u_array/g_lane[3].u_mac/U31/Y (AOI22_X0P5A_A12PP140ZTR_C30)
+                                                          0.08       3.24 f
+  u_array/g_lane[3].u_mac/U746/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.30 r
+  u_array/g_lane[3].u_mac/acc_reg[31]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.30 r
+  data arrival time                                                  3.30
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[3].u_mac/acc_reg[31]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.03       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.30
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_array/g_lane[0].u_mac/a_s1_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[0].u_mac/prod_ext_s2_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[0].u_mac/a_s1_reg[3]/CK (SDFFXRPQ_X2M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[0].u_mac/a_s1_reg[3]/Q (SDFFXRPQ_X2M_A12PP140ZTR_C30)
+                                                          0.18       0.23 r
+  u_array/g_lane[0].u_mac/U383/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.23       0.46 f
+  u_array/g_lane[0].u_mac/U384/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       0.55 r
+  u_array/g_lane[0].u_mac/U385/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.23       0.78 f
+  u_array/g_lane[0].u_mac/U42/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       0.87 r
+  u_array/g_lane[0].u_mac/U16/Y (OAI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.10       0.97 f
+  u_array/g_lane[0].u_mac/U467/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.10       1.07 r
+  u_array/g_lane[0].u_mac/U469/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       1.13 f
+  u_array/g_lane[0].u_mac/U78/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.08       1.21 r
+  u_array/g_lane[0].u_mac/U470/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.12       1.33 f
+  u_array/g_lane[0].u_mac/U471/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       1.39 r
+  u_array/g_lane[0].u_mac/U472/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.17       1.56 f
+  u_array/g_lane[0].u_mac/U150/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.57 r
+  u_array/g_lane[0].u_mac/U473/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       1.62 f
+  u_array/g_lane[0].u_mac/U474/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.12       1.74 r
+  u_array/g_lane[0].u_mac/U148/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.03       1.77 f
+  u_array/g_lane[0].u_mac/U476/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       1.81 r
+  u_array/g_lane[0].u_mac/U477/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.16       1.96 f
+  u_array/g_lane[0].u_mac/U145/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.98 r
+  u_array/g_lane[0].u_mac/U485/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       2.02 f
+  u_array/g_lane[0].u_mac/U486/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.13       2.15 r
+  u_array/g_lane[0].u_mac/U143/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.03       2.18 f
+  u_array/g_lane[0].u_mac/U491/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       2.22 r
+  u_array/g_lane[0].u_mac/U492/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.10       2.32 f
+  u_array/g_lane[0].u_mac/U498/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       2.38 r
+  u_array/g_lane[0].u_mac/U22/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.14       2.52 f
+  u_array/g_lane[0].u_mac/U123/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.07       2.59 f
+  u_array/g_lane[0].u_mac/U502/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.68 r
+  u_array/g_lane[0].u_mac/U504/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.10       2.79 f
+  u_array/g_lane[0].u_mac/U122/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.85 f
+  u_array/g_lane[0].u_mac/U508/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.94 r
+  u_array/g_lane[0].u_mac/U60/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.13       3.06 f
+  u_array/g_lane[0].u_mac/U139/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.01       3.08 r
+  u_array/g_lane[0].u_mac/U509/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.08       3.15 f
+  u_array/g_lane[0].u_mac/U510/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.21 r
+  u_array/g_lane[0].u_mac/U511/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.07       3.29 f
+  u_array/g_lane[0].u_mac/prod_ext_s2_reg[14]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.29 f
+  data arrival time                                                  3.29
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[0].u_mac/prod_ext_s2_reg[14]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.04       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_array/g_lane[2].u_mac/acc_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[2].u_mac/acc_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[2].u_mac/acc_reg[0]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[2].u_mac/acc_reg[0]/Q (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.16       0.21 r
+  u_array/g_lane[2].u_mac/U310/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.16       0.37 f
+  u_array/g_lane[2].u_mac/U49/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.12       0.49 r
+  u_array/g_lane[2].u_mac/U47/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.09       0.58 f
+  u_array/g_lane[2].u_mac/U46/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       0.65 r
+  u_array/g_lane[2].u_mac/U45/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       0.71 f
+  u_array/g_lane[2].u_mac/U43/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       0.77 r
+  u_array/g_lane[2].u_mac/U42/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       0.83 f
+  u_array/g_lane[2].u_mac/U39/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       0.89 r
+  u_array/g_lane[2].u_mac/U38/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       0.95 f
+  u_array/g_lane[2].u_mac/U37/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.01 r
+  u_array/g_lane[2].u_mac/U35/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.07 f
+  u_array/g_lane[2].u_mac/U34/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.13 r
+  u_array/g_lane[2].u_mac/U33/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.19 f
+  u_array/g_lane[2].u_mac/U62/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       1.28 r
+  u_array/g_lane[2].u_mac/U114/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       1.41 f
+  u_array/g_lane[2].u_mac/U112/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       1.52 r
+  u_array/g_lane[2].u_mac/U111/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       1.66 f
+  u_array/g_lane[2].u_mac/U109/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       1.77 r
+  u_array/g_lane[2].u_mac/U108/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       1.91 f
+  u_array/g_lane[2].u_mac/U107/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       2.02 r
+  u_array/g_lane[2].u_mac/U106/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       2.16 f
+  u_array/g_lane[2].u_mac/U105/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       2.27 r
+  u_array/g_lane[2].u_mac/U104/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.14       2.41 f
+  u_array/g_lane[2].u_mac/U103/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.49 r
+  u_array/g_lane[2].u_mac/U59/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       2.55 f
+  u_array/g_lane[2].u_mac/U58/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.61 r
+  u_array/g_lane[2].u_mac/U13/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       2.68 f
+  u_array/g_lane[2].u_mac/U57/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.75 r
+  u_array/g_lane[2].u_mac/U55/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       2.81 f
+  u_array/g_lane[2].u_mac/U101/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.90 r
+  u_array/g_lane[2].u_mac/U128/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       3.01 f
+  u_array/g_lane[2].u_mac/U733/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.07       3.07 r
+  u_array/g_lane[2].u_mac/U735/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.13 f
+  u_array/g_lane[2].u_mac/U736/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       3.17 r
+  u_array/g_lane[2].u_mac/U50/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.06       3.23 f
+  u_array/g_lane[2].u_mac/U737/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.29 r
+  u_array/g_lane[2].u_mac/acc_reg[31]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.29 r
+  data arrival time                                                  3.29
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[2].u_mac/acc_reg[31]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.03       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_array/g_lane[1].u_mac/a_s1_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[1].u_mac/prod_ext_s2_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[1].u_mac/a_s1_reg[3]/CK (SDFFXRPQ_X2M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[1].u_mac/a_s1_reg[3]/Q (SDFFXRPQ_X2M_A12PP140ZTR_C30)
+                                                          0.17       0.22 f
+  u_array/g_lane[1].u_mac/U210/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.04       0.26 r
+  u_array/g_lane[1].u_mac/U359/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.19       0.45 f
+  u_array/g_lane[1].u_mac/U360/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       0.54 r
+  u_array/g_lane[1].u_mac/U361/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.20       0.74 f
+  u_array/g_lane[1].u_mac/U12/Y (AOI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.13       0.87 r
+  u_array/g_lane[1].u_mac/U80/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       0.96 f
+  u_array/g_lane[1].u_mac/U441/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       1.05 r
+  u_array/g_lane[1].u_mac/U443/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       1.11 f
+  u_array/g_lane[1].u_mac/U444/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.08       1.19 r
+  u_array/g_lane[1].u_mac/U445/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.12       1.31 f
+  u_array/g_lane[1].u_mac/U446/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       1.36 r
+  u_array/g_lane[1].u_mac/U106/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.17       1.53 f
+  u_array/g_lane[1].u_mac/U22/Y (INV_X20M_A12PP140ZTR_C30)
+                                                          0.02       1.56 r
+  u_array/g_lane[1].u_mac/U447/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       1.60 f
+  u_array/g_lane[1].u_mac/U448/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.12       1.72 r
+  u_array/g_lane[1].u_mac/U127/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.03       1.75 f
+  u_array/g_lane[1].u_mac/U450/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       1.79 r
+  u_array/g_lane[1].u_mac/U451/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.16       1.95 f
+  u_array/g_lane[1].u_mac/U126/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.96 r
+  u_array/g_lane[1].u_mac/U458/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       2.00 f
+  u_array/g_lane[1].u_mac/U459/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.13       2.13 r
+  u_array/g_lane[1].u_mac/U125/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.03       2.16 f
+  u_array/g_lane[1].u_mac/U463/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       2.20 r
+  u_array/g_lane[1].u_mac/U464/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.10       2.30 f
+  u_array/g_lane[1].u_mac/U470/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       2.36 r
+  u_array/g_lane[1].u_mac/U471/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.09       2.45 f
+  u_array/g_lane[1].u_mac/U101/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.51 f
+  u_array/g_lane[1].u_mac/U477/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.60 r
+  u_array/g_lane[1].u_mac/U479/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.10       2.70 f
+  u_array/g_lane[1].u_mac/U99/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.76 f
+  u_array/g_lane[1].u_mac/U483/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.85 r
+  u_array/g_lane[1].u_mac/U484/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.20       3.05 f
+  u_array/g_lane[1].u_mac/U485/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.12       3.17 r
+  u_array/g_lane[1].u_mac/U486/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.07       3.24 f
+  u_array/g_lane[1].u_mac/U487/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.05       3.29 r
+  u_array/g_lane[1].u_mac/prod_ext_s2_reg[14]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.29 r
+  data arrival time                                                  3.29
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[1].u_mac/prod_ext_s2_reg[14]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.03       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_array/g_lane[1].u_mac/acc_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[1].u_mac/acc_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[1].u_mac/acc_reg[1]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[1].u_mac/acc_reg[1]/Q (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.16       0.21 r
+  u_array/g_lane[1].u_mac/U228/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.14       0.36 f
+  u_array/g_lane[1].u_mac/U117/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       0.47 r
+  u_array/g_lane[1].u_mac/U115/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       0.61 f
+  u_array/g_lane[1].u_mac/U112/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       0.72 r
+  u_array/g_lane[1].u_mac/U111/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       0.85 f
+  u_array/g_lane[1].u_mac/U9/Y (OAI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.18       1.04 r
+  u_array/g_lane[1].u_mac/U42/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.11       1.15 f
+  u_array/g_lane[1].u_mac/U39/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       1.21 r
+  u_array/g_lane[1].u_mac/U38/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       1.29 f
+  u_array/g_lane[1].u_mac/U37/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.35 r
+  u_array/g_lane[1].u_mac/U35/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       1.43 f
+  u_array/g_lane[1].u_mac/U64/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.49 r
+  u_array/g_lane[1].u_mac/U34/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       1.56 f
+  u_array/g_lane[1].u_mac/U240/Y (OR2_X1TM_A12PP140ZTR_C30)
+                                                          0.05       1.61 f
+  u_array/g_lane[1].u_mac/U60/Y (NAND2_X2TA_A12PP140ZTR_C30)
+                                                          0.04       1.65 r
+  u_array/g_lane[1].u_mac/U33/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.71 f
+  u_array/g_lane[1].u_mac/U59/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.77 r
+  u_array/g_lane[1].u_mac/U32/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       1.84 f
+  u_array/g_lane[1].u_mac/U58/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.90 r
+  u_array/g_lane[1].u_mac/U31/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       1.98 f
+  u_array/g_lane[1].u_mac/U57/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.04 r
+  u_array/g_lane[1].u_mac/U30/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.12 f
+  u_array/g_lane[1].u_mac/U56/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.18 r
+  u_array/g_lane[1].u_mac/U14/Y (AOI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.17       2.34 f
+  u_array/g_lane[1].u_mac/U55/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.43 r
+  u_array/g_lane[1].u_mac/U29/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.51 f
+  u_array/g_lane[1].u_mac/U54/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.57 r
+  u_array/g_lane[1].u_mac/U13/Y (AOI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.17       2.74 f
+  u_array/g_lane[1].u_mac/U52/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.82 r
+  u_array/g_lane[1].u_mac/U27/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.90 f
+  u_array/g_lane[1].u_mac/U51/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.97 r
+  u_array/g_lane[1].u_mac/U50/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.09       3.06 f
+  u_array/g_lane[1].u_mac/U286/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       3.12 f
+  u_array/g_lane[1].u_mac/U98/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.05       3.16 r
+  u_array/g_lane[1].u_mac/U96/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.06       3.23 f
+  u_array/g_lane[1].u_mac/U738/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.29 r
+  u_array/g_lane[1].u_mac/acc_reg[31]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.29 r
+  data arrival time                                                  3.29
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[1].u_mac/acc_reg[31]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.03       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: u_array/g_lane[1].u_mac/acc_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[1].u_mac/acc_reg[30]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[1].u_mac/acc_reg[1]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[1].u_mac/acc_reg[1]/Q (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.16       0.21 r
+  u_array/g_lane[1].u_mac/U228/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.14       0.36 f
+  u_array/g_lane[1].u_mac/U117/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       0.47 r
+  u_array/g_lane[1].u_mac/U115/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       0.61 f
+  u_array/g_lane[1].u_mac/U112/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       0.72 r
+  u_array/g_lane[1].u_mac/U111/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       0.85 f
+  u_array/g_lane[1].u_mac/U9/Y (OAI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.18       1.04 r
+  u_array/g_lane[1].u_mac/U42/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.11       1.15 f
+  u_array/g_lane[1].u_mac/U39/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       1.21 r
+  u_array/g_lane[1].u_mac/U38/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       1.29 f
+  u_array/g_lane[1].u_mac/U37/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.35 r
+  u_array/g_lane[1].u_mac/U35/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       1.43 f
+  u_array/g_lane[1].u_mac/U64/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.49 r
+  u_array/g_lane[1].u_mac/U34/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       1.56 f
+  u_array/g_lane[1].u_mac/U240/Y (OR2_X1TM_A12PP140ZTR_C30)
+                                                          0.05       1.61 f
+  u_array/g_lane[1].u_mac/U60/Y (NAND2_X2TA_A12PP140ZTR_C30)
+                                                          0.04       1.65 r
+  u_array/g_lane[1].u_mac/U33/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.71 f
+  u_array/g_lane[1].u_mac/U59/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.77 r
+  u_array/g_lane[1].u_mac/U32/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       1.84 f
+  u_array/g_lane[1].u_mac/U58/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.90 r
+  u_array/g_lane[1].u_mac/U31/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       1.98 f
+  u_array/g_lane[1].u_mac/U57/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.04 r
+  u_array/g_lane[1].u_mac/U30/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.12 f
+  u_array/g_lane[1].u_mac/U56/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.18 r
+  u_array/g_lane[1].u_mac/U14/Y (AOI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.17       2.34 f
+  u_array/g_lane[1].u_mac/U55/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.43 r
+  u_array/g_lane[1].u_mac/U29/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.51 f
+  u_array/g_lane[1].u_mac/U54/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.57 r
+  u_array/g_lane[1].u_mac/U13/Y (AOI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.17       2.74 f
+  u_array/g_lane[1].u_mac/U52/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.82 r
+  u_array/g_lane[1].u_mac/U27/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.90 f
+  u_array/g_lane[1].u_mac/U51/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.97 r
+  u_array/g_lane[1].u_mac/U283/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.07       3.03 f
+  u_array/g_lane[1].u_mac/U284/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.05       3.08 r
+  u_array/g_lane[1].u_mac/U302/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.05       3.13 f
+  u_array/g_lane[1].u_mac/U120/Y (AOI22_X0P7A_A12PP140ZTR_C30)
+                                                          0.07       3.20 r
+  u_array/g_lane[1].u_mac/U736/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.07       3.27 f
+  u_array/g_lane[1].u_mac/acc_reg[30]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.27 f
+  data arrival time                                                  3.27
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[1].u_mac/acc_reg[30]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.03       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.27
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: u_array/g_lane[2].u_mac/a_s1_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[2].u_mac/prod_ext_s2_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[2].u_mac/a_s1_reg[3]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[2].u_mac/a_s1_reg[3]/Q (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.27       0.32 r
+  u_array/g_lane[2].u_mac/U4/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.30       0.62 f
+  u_array/g_lane[2].u_mac/U48/Y (AOI21_X0P7A_A12PP140ZTR_C30)
+                                                          0.12       0.74 r
+  u_array/g_lane[2].u_mac/U180/Y (OAI21_X1P4A_A12PP140ZTR_C30)
+                                                          0.14       0.88 f
+  u_array/g_lane[2].u_mac/U88/Y (AOI21_X0P7A_A12PP140ZTR_C30)
+                                                          0.09       0.97 r
+  u_array/g_lane[2].u_mac/U44/Y (OAI21_X0P5A_A12PP140ZTR_C30)
+                                                          0.10       1.07 f
+  u_array/g_lane[2].u_mac/U80/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.10       1.17 r
+  u_array/g_lane[2].u_mac/U416/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       1.23 f
+  u_array/g_lane[2].u_mac/U74/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.08       1.31 r
+  u_array/g_lane[2].u_mac/U67/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.12       1.43 f
+  u_array/g_lane[2].u_mac/U417/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       1.48 r
+  u_array/g_lane[2].u_mac/U64/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.17       1.65 f
+  u_array/g_lane[2].u_mac/U140/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.67 r
+  u_array/g_lane[2].u_mac/U418/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       1.71 f
+  u_array/g_lane[2].u_mac/U229/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       1.78 r
+  u_array/g_lane[2].u_mac/U133/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       1.81 f
+  u_array/g_lane[2].u_mac/U422/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.03       1.84 r
+  u_array/g_lane[2].u_mac/U423/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.16       2.00 f
+  u_array/g_lane[2].u_mac/U132/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.02       2.01 r
+  u_array/g_lane[2].u_mac/U430/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       2.05 f
+  u_array/g_lane[2].u_mac/U431/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.13       2.18 r
+  u_array/g_lane[2].u_mac/U131/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.03       2.21 f
+  u_array/g_lane[2].u_mac/U228/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.04       2.25 r
+  u_array/g_lane[2].u_mac/U435/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.10       2.35 f
+  u_array/g_lane[2].u_mac/U441/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       2.41 r
+  u_array/g_lane[2].u_mac/U102/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.09       2.50 f
+  u_array/g_lane[2].u_mac/U129/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.56 f
+  u_array/g_lane[2].u_mac/U447/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.65 r
+  u_array/g_lane[2].u_mac/U449/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.10       2.76 f
+  u_array/g_lane[2].u_mac/U127/Y (AND2_X1TM_A12PP140ZTR_C30)
+                                                          0.06       2.82 f
+  u_array/g_lane[2].u_mac/U453/Y (OAI22_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.91 r
+  u_array/g_lane[2].u_mac/U454/Y (OAI22_X2A_A12PP140ZTR_C30)
+                                                          0.13       3.03 f
+  u_array/g_lane[2].u_mac/U126/Y (INV_X20B_A12PP140ZTR_C30)
+                                                          0.01       3.05 r
+  u_array/g_lane[2].u_mac/U455/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.08       3.12 f
+  u_array/g_lane[2].u_mac/U100/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.06       3.18 r
+  u_array/g_lane[2].u_mac/U99/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.07       3.26 f
+  u_array/g_lane[2].u_mac/prod_ext_s2_reg[14]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.26 f
+  data arrival time                                                  3.26
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[2].u_mac/prod_ext_s2_reg[14]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.04       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: u_array/g_lane[2].u_mac/acc_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_array/g_lane[2].u_mac/acc_reg[30]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  int8_array_n4      Small                 sc12mcpp140z_l28hpc_hpk_rvt_c30_tt_ctypical_max_0p90v_85c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.05       0.05
+  u_array/g_lane[2].u_mac/acc_reg[0]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       0.05 r
+  u_array/g_lane[2].u_mac/acc_reg[0]/Q (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.16       0.21 r
+  u_array/g_lane[2].u_mac/U310/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.16       0.37 f
+  u_array/g_lane[2].u_mac/U49/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.12       0.49 r
+  u_array/g_lane[2].u_mac/U47/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.09       0.58 f
+  u_array/g_lane[2].u_mac/U46/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       0.65 r
+  u_array/g_lane[2].u_mac/U45/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       0.71 f
+  u_array/g_lane[2].u_mac/U43/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       0.77 r
+  u_array/g_lane[2].u_mac/U42/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       0.83 f
+  u_array/g_lane[2].u_mac/U39/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       0.89 r
+  u_array/g_lane[2].u_mac/U38/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       0.95 f
+  u_array/g_lane[2].u_mac/U37/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.01 r
+  u_array/g_lane[2].u_mac/U35/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.07 f
+  u_array/g_lane[2].u_mac/U34/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       1.13 r
+  u_array/g_lane[2].u_mac/U33/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       1.19 f
+  u_array/g_lane[2].u_mac/U62/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       1.28 r
+  u_array/g_lane[2].u_mac/U114/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       1.41 f
+  u_array/g_lane[2].u_mac/U112/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       1.52 r
+  u_array/g_lane[2].u_mac/U111/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       1.66 f
+  u_array/g_lane[2].u_mac/U109/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       1.77 r
+  u_array/g_lane[2].u_mac/U108/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       1.91 f
+  u_array/g_lane[2].u_mac/U107/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       2.02 r
+  u_array/g_lane[2].u_mac/U106/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.13       2.16 f
+  u_array/g_lane[2].u_mac/U105/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.11       2.27 r
+  u_array/g_lane[2].u_mac/U104/Y (AOI21_X1A_A12PP140ZTR_C30)
+                                                          0.14       2.41 f
+  u_array/g_lane[2].u_mac/U103/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.08       2.49 r
+  u_array/g_lane[2].u_mac/U59/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       2.55 f
+  u_array/g_lane[2].u_mac/U58/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.61 r
+  u_array/g_lane[2].u_mac/U13/Y (AOI21_X2A_A12PP140ZTR_C30)
+                                                          0.07       2.68 f
+  u_array/g_lane[2].u_mac/U57/Y (OAI21_X2A_A12PP140ZTR_C30)
+                                                          0.06       2.75 r
+  u_array/g_lane[2].u_mac/U55/Y (AOI21_X3A_A12PP140ZTR_C30)
+                                                          0.06       2.81 f
+  u_array/g_lane[2].u_mac/U101/Y (OAI21_X1A_A12PP140ZTR_C30)
+                                                          0.09       2.90 r
+  u_array/g_lane[2].u_mac/U726/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.08       2.98 f
+  u_array/g_lane[2].u_mac/U728/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.05       3.03 r
+  u_array/g_lane[2].u_mac/U729/Y (NOR2_X1TA_A12PP140ZTR_C30)
+                                                          0.05       3.08 f
+  u_array/g_lane[2].u_mac/U51/Y (AOI22_X1A_A12PP140ZTR_C30)
+                                                          0.06       3.13 r
+  u_array/g_lane[2].u_mac/U730/Y (NAND2_X1TA_A12PP140ZTR_C30)
+                                                          0.07       3.20 f
+  u_array/g_lane[2].u_mac/acc_reg[30]/D (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.20 f
+  data arrival time                                                  3.20
+
+  clock clk (rise edge)                                   3.33       3.33
+  clock network delay (ideal)                             0.05       3.38
+  clock uncertainty                                      -0.05       3.33
+  u_array/g_lane[2].u_mac/acc_reg[30]/CK (SDFFXRPQ_X1M_A12PP140ZTR_C30)
+                                                          0.00       3.33 r
+  library setup time                                     -0.03       3.30
+  data required time                                                 3.30
+  --------------------------------------------------------------------------
+  data required time                                                 3.30
+  data arrival time                                                 -3.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.10
+
+
+1
