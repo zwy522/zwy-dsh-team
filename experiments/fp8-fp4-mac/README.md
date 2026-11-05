@@ -14,8 +14,12 @@ Measured (3.5 ns, default activity):
 
 | format | area um^2 | cells | CP ns | slack | energy pJ/MAC |
 |---|---:|---:|---:|---:|---:|
+| FP16 (reference) | 921.19 | 1297 | 2.91 | +0.49 | 0.667 |
 | INT8 (P0b) | 378.13 | 365 | 1.13 | +2.26 | 0.366 |
 | FP8 E4M3 | 619.42 | 927 | 2.61 | +0.80 | 0.315 |
 | FP4 E2M1 | 551.25 | 846 | 2.49 | +0.91 | 0.200 |
 
 Only synthesis was run; the DW FP32 adder was not functionally simulated yet.
+
+FP16 is included as the reference for the "one FP16 unit equivalent" cost table
+in `docs/analysis-report-single-format-executor.md` §5.

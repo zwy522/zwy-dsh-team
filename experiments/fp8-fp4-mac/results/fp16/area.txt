@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : fp16_mac
+Version: O-2018.06-SP1
+Date   : Thu Nov  5 19:44:33 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                           73
+Number of nets:                          1431
+Number of cells:                         1297
+Number of combinational cells:           1231
+Number of sequential cells:                65
+Number of macros/black boxes:               0
+Number of buf/inv:                        238
+Number of references:                      46
+
+Combinational area:                774.143994
+Buf/Inv area:                       60.228001
+Noncombinational area:             147.041993
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   921.185987
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  -------------------------------------------------
+fp16_mac                           921.1860    100.0  774.1440   145.1520  0.0000  fp16_mac
+u/clk_gate_acc_r_reg                 1.8900      0.2    0.0000     1.8900  0.0000  SNPS_CLOCK_GATE_HIGH_fp_mac_SIG_W11_EXP_W5_BIAS15
+--------------------------------  ---------  -------  --------  ---------  ------  -------------------------------------------------
+Total                                                 774.1440   147.0420  0.0000
+
+1
