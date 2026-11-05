@@ -1,0 +1,16 @@
+# TSMC 28HPC+ FF (0.99 V / 0 °C), 3.50 ns, matching the MSD-Core flow.
+set clk_period 3.50
+create_clock -name clk -period $clk_period [get_ports clk]
+set_clock_uncertainty -setup 0.10 [get_clocks clk]
+set_clock_uncertainty -hold 0.02 [get_clocks clk]
+set_clock_transition 0.05 [get_clocks clk]
+set_clock_latency 0.05 [get_clocks clk]
+
+set_input_transition 0.05 [remove_from_collection [all_inputs] [get_ports clk]]
+set_load 0.05 [all_outputs]
+set_input_delay 0.60 -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
+set_output_delay 0.60 -clock clk [all_outputs]
+set_max_fanout 40 [current_design]
+
+set_false_path -from [get_ports rst_n]
+set_false_path -to [get_ports valid_out]

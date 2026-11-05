@@ -1,0 +1,4 @@
+int8_tile16 directed functional test (VCS O-2018.09):
+weights all 1; x=1 -> y0=16; x=2 -> y0=48.
+Result: PASS int8_tile16, y0=48
+Command: vcs -full64 -sverilog tb_int8_tile16.v rtl/int8_tile16.v -o simv_tile16 && ./simv_tile16

@@ -1,0 +1,295 @@
+Initializing gui preferences from file  /home/host/.synopsys_dv_prefs.tcl
+# P0b: same INT8 RTL, re-synthesized with the user's TSMC 28 nm HPC+ FF library.
+# This isolates the standard-cell library density effect from the RTL effect.
+set Design int8_mac
+int8_mac
+remove_design -all
+1
+set lib_db "/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db"
+/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db
+set target_library $lib_db
+/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db
+set link_library [list "*" $lib_db]
+* /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db
+set search_path [list . /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs]
+. /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs
+analyze -format verilog -library WORK ./rtl/int8_mac.v
+Running PRESTO HDLC
+Compiling source file ./rtl/int8_mac.v
+Presto compilation completed successfully.
+Loading db file '/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+1
+elaborate $Design
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp40p140ffg0p99v0c_ccs'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./rtl/int8_mac.v:43: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./rtl/int8_mac.v:46: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./rtl/int8_mac.v:58: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./rtl/int8_mac.v:65: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine int8_mac line 36 in file
+                './rtl/int8_mac.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      a_s1_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      b_s1_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       acc_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    clear_s1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    clear_s2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   prod_ext_s2_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      v_s2_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      v_s1_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'int8_mac'.
+1
+current_design $Design
+Current design is 'int8_mac'.
+{int8_mac}
+link
+
+  Linking design 'int8_mac'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  int8_mac                    /home/host/p0b_tsmc/int8_mac.db
+  tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (library) /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db
+
+1
+check_design > check_design_tsmc.txt
+source ./synopsys_tsmc_ff.sdc
+Current design is 'int8_mac'.
+1
+compile_ultra -timing -gate_clock
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Information: Failed to find dw_foundation.sldb in the user defined search_path, load it from 'Synopsys Root'. (UISN-70)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Warning: The -timing_high_effort_script option is ignored.  (OPT-1342)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'int8_mac'
+
+Loaded alib file './alib-52/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 2 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'int8_mac'
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[16]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[17]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[18]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[19]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[20]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[21]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[22]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[23]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[24]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[25]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[26]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[27]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[28]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[29]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[30]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+Information: In design 'int8_mac', the register 'prod_ext_s2_reg[31]' is removed because it is merged to 'prod_ext_s2_reg[15]'. (OPT-1215)
+ Implement Synthetic for 'int8_mac'.
+  Processing 'SNPS_CLOCK_GATE_HIGH_int8_mac'
+  Mapping integrated clock gating circuitry
+Memory usage for J1 task 1550 Mbytes -- main task 1550 Mbytes.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELBWP40P140' in the library 'tcbn28hpcplusbwp40p140ffg0p99v0c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP40P140' in the library 'tcbn28hpcplusbwp40p140ffg0p99v0c_ccs' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_int8_mac, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design int8_mac_DW01_add_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design int8_mac_DW_mult_tc_J1_0, since there are no registers. (PWR-806)
+Information: Performing clock-gating on design int8_mac. (PWR-730)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'int8_mac'. (DDB-72)
+Information: There is no timing violation in design int8_mac. Delay-based auto_ungroup will not be performed. (OPT-780)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:09     378.4      0.00       0.0       0.0                            279.2258
+    0:00:09     378.4      0.00       0.0       0.0                            279.2258
+    0:00:09     378.4      0.00       0.0       0.0                            279.2258
+    0:00:09     378.4      0.00       0.0       0.0                            279.2258
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:10     378.1      0.00       0.0       0.0                            278.9621
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:10     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+    0:00:11     378.1      0.00       0.0       0.0                            267.1519
+Loading db file '/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+report_area -nosplit -hierarchy > area_tsmc.txt
+report_timing -max_paths 10 > timing_tsmc.txt
+report_power > power_tsmc.txt
+report_qor > qor_tsmc.txt
+report_constraint -all_violators > constraints_tsmc.txt
+write -format verilog -hierarchy -output netlist_tsmc.v
+Writing verilog file '/home/host/p0b_tsmc/netlist_tsmc.v'.
+1
+exit
+
+Memory usage for main task 1550 Mbytes.
+Memory usage for this session 1550 Mbytes.
+CPU usage for this session 37 seconds ( 0.01 hours ).
+
+Thank you...
+

@@ -1,0 +1,24 @@
+K=128, guard=9, N=16384, f=300 MHz, peak=9.8304 TOPS
+fmt   target   R  mod  GEMM  Q_eff cost_norm  AEE_norm
+INT8  BF16    25    4   4.0   4.00     1.000     1.000
+INT8  FP16    31    4   4.0   4.00     1.000     1.000
+INT8  FP32    57    8   8.0   8.00     1.000     1.000
+INT8  FP64   115   15  15.0  15.00     1.000     1.000
+FP8   BF16    25    3   9.0   9.00     2.970     0.337
+FP8   FP16    31    4  12.0  12.00     3.960     0.253
+FP8   FP32    57    7  21.0  21.00     3.465     0.289
+FP8   FP64   115   13  39.0  39.00     3.432     0.291
+FP4   BF16    25    5  19.8   9.88     1.778     0.563
+FP4   FP16    31    6  23.7  11.85     2.133     0.469
+FP4   FP32    57   10  39.5  19.75     1.778     0.563
+FP4   FP64   115   20  79.0  39.50     1.896     0.527
+
+Sensitivity (cost_norm; lower is better):
+  BF16: INT8=1.000 FP8=2.970 FP4=1.778
+  FP16: INT8=1.000 FP8=3.960 FP4=2.133
+  FP32: INT8=1.000 FP8=3.465 FP4=1.778
+  FP64: INT8=1.000 FP8=3.432 FP4=1.896
+  FP4 area*energy factor 0.30 -> FP32 cost_norm ~ 0.741
+  FP4 area*energy factor 0.50 -> FP32 cost_norm ~ 1.234
+  FP4 area*energy factor 0.72 -> FP32 cost_norm ~ 1.778
+  FP4 area*energy factor 1.00 -> FP32 cost_norm ~ 2.469

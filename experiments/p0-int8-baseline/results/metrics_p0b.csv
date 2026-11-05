@@ -1,0 +1,17 @@
+metric,value
+tsmc_mac_area_um2,378.126
+tsmc_mac_cells,365
+tsmc_mac_dynamic_power_mw,0.1096
+tsmc_mac_leakage_power_mw,0.0003
+tsmc_mac_total_power_mw,0.1099
+tsmc_energy_per_mac_pj,0.3663
+tsmc_extrap_128x128_area_mm2,6.195
+tsmc_extrap_128x128_power_w,1.800
+tsmc_peak_tops,9.8304
+tsmc_tops_per_mm2,1.5868
+tsmc_tops_per_w,5.4604
+tsmc_area_ratio_vs_ozcore,1.42
+tsmc_power_ratio_vs_ozcore,3.83
+smic_mac_area_um2,1281.672
+smic_energy_per_mac_pj,1.7778
+area_reduction_smic_to_tsmc,3.39

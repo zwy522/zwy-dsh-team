@@ -1,7 +1,8 @@
 # P0 — INT8 baseline calibration
 
-Status: P0 INT8 baseline complete (28 nm DC + VCS; power is default-activity);
-the absolute OzCore reproduction gate is not met (see `results/P0_REPORT.md`).
+Status: P0 + P0b complete. P0b re-synthesized the same INT8 RTL with the
+user's TSMC 28 nm HPC+ FF library: area 1281.67 -> 378.13 µm² (1.42× OzCore),
+default-activity energy 1.778 -> 0.366 pJ/MAC. See `results/P0B_REPORT.md`.
 This directory holds the artifacts for P0 of
 [`docs/single-format-executor-area-energy-plan.md`](../../docs/single-format-executor-area-energy-plan.md):
 
@@ -23,6 +24,7 @@ This directory holds the artifacts for P0 of
 | `model/ozaki2_int8.py` | Reduced Ozaki-II / CRT pass-count model |
 | `results/pass_count.csv` | s vs relative-L2 error sweep |
 | `results/P0_REPORT.md` | P0 findings, deviations and next steps |
+| `results/P0B_REPORT.md` | P0b: SMIC vs TSMC library comparison + tile |
 | `results/metrics.csv` | Computed area/power/energy-extrapolation metrics |
 | `results/dc_int8_mac/` | DC reports + netlist for one MAC |
 | `results/dc_int8_array_n4/` | DC reports + netlist for the 4-lane array |
