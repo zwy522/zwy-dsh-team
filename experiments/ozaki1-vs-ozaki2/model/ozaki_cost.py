@@ -25,6 +25,34 @@ SLICE_GUARD = 6       # k = ceil((B + 6) / 8); calibrated to paper's 7-8 slices 
 MOD_BITS = 8
 MOD_GUARD = 10        # s = ceil((2B + 10) / 8); conservative vs paper's 16 at FP64
 
+# Greedy descending pairwise-coprime set used by Ozaki-II INT8 (paper example).
+# 256 is special: residues are in [-128,127] under symmetric modulo; all other
+# moduli are odd, so gcd(256, odd)=1.
+MODULI_16 = [256, 255, 253, 251, 247, 239, 233, 229, 227, 223, 217, 211, 199, 197, 193, 191]
+
+def moduli_table(q: int, guard: int = 2) -> list[dict]:
+    rows = []
+    P = 1
+    for s, m in enumerate(MODULI_16, 1):
+        P *= m
+        bits = math.log2(P)
+        kA_kB = math.floor(math.log2((P / 2 - 1) / q)) if P > 2*q else 0
+        rows.append({"s": s, "m_s": m, "M_bits": bits,
+                     "kA_kB": kA_kB,
+                     "exact_B53": int(bits >= 53 + math.log2(q) + guard),
+                     "exact_B24": int(bits >= 24 + math.log2(q) + guard),
+                     "exact_B8": int(bits >= 8 + math.log2(q) + guard)})
+    return rows
+
+def select_s_min(B: int, q: int, guard: int = 2) -> int:
+    need = B + math.log2(q) + guard
+    P = 1
+    for s, m in enumerate(MODULI_16, 1):
+        P *= m
+        if math.log2(P) >= need:
+            return s
+    return len(MODULI_16)
+
 @dataclass
 class CostConfig:
     macs_per_cycle: int = 128 * 128     # 128x128 INT8 array
@@ -107,6 +135,11 @@ def main():
     with open("results/verify_counts.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(vrows[0].keys())); w.writeheader(); w.writerows(vrows)
     vmod = verify_moduli()
+    mt = moduli_table(4096)
+    with open("results/moduli_table.csv", "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(mt[0].keys())); w.writeheader(); w.writerows(mt)
+    print("s_min for B=8/11/24/53 at K=4096, guard=2:",
+          [select_s_min(B, 4096, 2) for B in (8, 11, 24, 53)])
     print("=== pass counts and time at K=4096 (cycles, ns; 1 GHz) ===")
     print(f"{'B':>4} {'fmt':>5} {'Q':>3} {'gemm%':>7} {'pre%':>6} {'post%':>7} {'mem%':>6} {'total ns':>10}")
     for r in summary:

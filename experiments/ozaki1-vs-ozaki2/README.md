@@ -7,7 +7,8 @@ Theory and cost comparison of Ozaki Scheme I (slice decomposition,
 - `model/ozaki_cost.py`: pass counts, pre/post element-wise work, memory
   traffic, and a cycle-level time model (128×128 INT8 array, 1 GHz).
 - `model/plot_cost.py`: Q vs precision, time vs K, and breakdown plots.
-- `results/`: CSV tables and PNG figures.
+- `results/`: CSV tables and PNG figures, including `moduli_table.csv`
+  (s, m_s, M bits, kA+kB, exactness checks).
 - `docs/ozaki1-vs-ozaki2-analysis.md`: full write-up (theory, tables,
   verification, discussion).
 
