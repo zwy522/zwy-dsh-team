@@ -1,0 +1,17 @@
+Table 4 -- WikiText-2 PPL, LLaMA-3.1-8B (BF16), OzCore scaling-parameter ablation (k=128)
+seqlen=2048, n=141; PPL = exp(sum(nll)/(n*seqlen)); computed from data/emulation/tab4/
+* marks the OzCore default column (b_S=8, b_P=8).
+-----------------------------------------------------------
+(a) Varying b_S  (b_P = 8)        [ablation_s/]
+    s |    b_S=1    b_S=2    b_S=4   b_S=8*   b_S=16
+   ---+---------------------------------------------
+    4 |    6.242    6.243    6.239    6.243    6.244
+    3 |    6.253    6.246    6.242    6.242    6.243
+    2 |    8.529    6.726    6.384    6.363    6.362
+
+(b) Varying b_P  (b_S = 8)        [ablation_m/]
+    s |    b_P=1    b_P=2    b_P=4   b_P=8*   b_P=16
+   ---+---------------------------------------------
+    4 |    6.242    6.243    6.243    6.243    6.245
+    3 |    6.241    6.244    6.243    6.242    6.243
+    2 |    6.391    6.374    6.363    6.363    6.363
