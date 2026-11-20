@@ -69,6 +69,15 @@ bash scripts/fig16.sh
 - **28nm**：即使有 DC + TSMC 28nm HPC+，也只能做**替代工艺**的 Ten-four RTL 综合（还需 Vortex 头文件），不能复现 OzCore 的 Catapult HLS stages 与 FDSOI 面积；论文的 27.9%/1.91×/1.40× 仍不可独立验证。
 - 若要精确复现，需要：启动/提供 28nm FDSOI + Catapult + DC 的 EDA 环境；提供 LLaMA-3.1 权重/权限与 CUDA 工具链（GPU 路线）。
 
+### 2.2 TSMC 28nm 替代综合的当前阻塞（2026-11-20）
+
+用户已同意用 TSMC 28nm HPC+ 做替代综合；IC_EDA VM 已启动，DC 与 `tcbn28hpcplus...` 库可用。但要跑 artifact 的综合源，仍缺两类依赖：
+
+1. **Ten-four RTL 的 Vortex 头文件/共享模块**：`VX_define.vh`、`VX_gpu_pkg`、`VX_csa_tree`、`VX_ks_adder`、`VX_pipe_register`、`VX_lzc`、`VX_wallace_mul`、`VX_reset_relay` 等。artifact 只 vendored Ten-four 变体，明确要求 Vortex checkout；当前 VM 内没有 Vortex，VM 内 `git clone github.com/vortexgpgpu/vortex` 超时，主机 GitHub 也不可达。
+2. **OzCore HLS**：artifact 的 OzCore stages 面积由 Catapult HLS 生成；VM 内无 `catapult`。TSMC 替代只能覆盖 Ten-four 的 RTL 综合，不能覆盖 OzCore HLS stages。
+
+因此 TSMC 替代综合**尚未实际运行**：不是不同意，而是缺 Ten-four 的 Vortex 依赖（以及 OzCore HLS 的 Catapult）。若提供 Vortex checkout（或可访问的镜像/路径），我可以在 IC_EDA 上用 DC + TSMC 28nm HPC+ 综合 Ten-four 的 INT8/FP16 变体，验证 Fig2 的融合税/密度趋势；若同时提供 Catapult，可进一步做 OzCore HLS 的 TSMC 替代面积。两者都会标注“TSMC 28nm 替代，不是论文 FDSOI 绝对值”。
+
 ## 3. 结果
 
 ### 3.1 Table 2（WikiText-2 PPL）
