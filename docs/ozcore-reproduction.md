@@ -76,7 +76,13 @@ bash scripts/fig16.sh
 1. **Ten-four RTL 的 Vortex 头文件/共享模块**：`VX_define.vh`、`VX_gpu_pkg`、`VX_csa_tree`、`VX_ks_adder`、`VX_pipe_register`、`VX_lzc`、`VX_wallace_mul`、`VX_reset_relay` 等。artifact 只 vendored Ten-four 变体，明确要求 Vortex checkout；当前 VM 内没有 Vortex，VM 内 `git clone github.com/vortexgpgpu/vortex` 超时，主机 GitHub 也不可达。
 2. **OzCore HLS**：artifact 的 OzCore stages 面积由 Catapult HLS 生成；VM 内无 `catapult`。TSMC 替代只能覆盖 Ten-four 的 RTL 综合，不能覆盖 OzCore HLS stages。
 
-因此 TSMC 替代综合**尚未实际运行**：不是不同意，而是缺 Ten-four 的 Vortex 依赖（以及 OzCore HLS 的 Catapult）。若提供 Vortex checkout（或可访问的镜像/路径），我可以在 IC_EDA 上用 DC + TSMC 28nm HPC+ 综合 Ten-four 的 INT8/FP16 变体，验证 Fig2 的融合税/密度趋势；若同时提供 Catapult，可进一步做 OzCore HLS 的 TSMC 替代面积。两者都会标注“TSMC 28nm 替代，不是论文 FDSOI 绝对值”。
+**已实际完成 INT8 变体的 TSMC 28nm HPC+ 替代综合**（Vortex 依赖通过 Gitee 镜像获得；详见 `docs/ozcore-tsmc28-substitute.md`）：
+
+| RTL | TSMC 28nm HPC+ | 论文 FDSOI | 比值 |
+|---|---:|---:|---:|
+| Ten-four INT8（K=128） | **62,969.0 µm²** | 59,901.9 µm² | **1.051×** |
+
+同一份 Ten-four RTL、N=64、300 MHz、DC O-2018.06；面积只差 5.1%，说明 RTL/流程可复现，TSMC 替代用于趋势验证合理。仍不能把 62,969 当作论文绝对面积（库/flow 不同）。FP16 变体正在同流程下综合（需 `VX_lzc`/`VX_wallace_mul`/`VX_find_first`，运行时间明显更长）；OzCore HLS stages 仍需 Catapult + FDSOI 才能精确复现。
 
 ## 3. 结果
 
