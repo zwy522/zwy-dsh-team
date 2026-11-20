@@ -49,6 +49,25 @@ bash scripts/fig16.sh
 
 所有命令在 CPU 上完成；Fig 5/10/14/15 通过 `jupyter nbconvert --execute` 运行，单次几十秒。
 
+### 2.1 本机能力核查（2026-11-20）
+
+用户指出本机可能具备 GPU 与 28nm 综合条件；我们重新核查如下，区分“有硬件”与“能复现 artifact 的完整条件”：
+
+| 资源 | 本机实际情况 | 是否满足 artifact 复现 |
+|---|---|---|
+| GPU | `nvidia-smi`：RTX 4090，24 GB（非 A6000 48 GB） | 8B 勉强可试；70B 参考配置为 48 GB + offload，24 GB 不足/风险高 |
+| CUDA 工具链 | `nvcc` 不存在；PyTorch 未安装 | 不满足 A-1 扩展编译 |
+| LLaMA 权重/权限 | HF cache 仅 21 MB（DeepSeek GGUF/WikiText），无 LLaMA-3.1；无 HF token | 不满足 Table 2/3/5 的 fresh GPU run |
+| 28nm EDA | `vmrun list` 为空；仅 4 GB `ai-client` VM；主机无 `dc_shell`/`/home/synopsys` | 不满足 DC 综合 |
+| Catapult HLS | 未安装 | 不满足 OzCore HLS 设计（artifact 的 OzCore stages 由 Catapult 生成） |
+| 28nm FDSOI NDA 库 | 无；此前用的是 TSMC 28nm HPC+，不是 FDSOI | 不满足论文面积口径 |
+
+因此，本报告说的“不能复现”是**不能复现 artifact 的精确条件**，不是“本机完全没有硬件”。具体地：
+
+- **GPU**：4090 24 GB 可以尝试 8B 的 A-1 路径（若安装 CUDA toolkit/PyTorch 并提供 LLaMA-3.1-8B 的 HF 权限/权重），但 70B 的 48 GB 参考配置不满足；Table 3 还需要 lm-eval 全量评估。
+- **28nm**：即使有 DC + TSMC 28nm HPC+，也只能做**替代工艺**的 Ten-four RTL 综合（还需 Vortex 头文件），不能复现 OzCore 的 Catapult HLS stages 与 FDSOI 面积；论文的 27.9%/1.91×/1.40× 仍不可独立验证。
+- 若要精确复现，需要：启动/提供 28nm FDSOI + Catapult + DC 的 EDA 环境；提供 LLaMA-3.1 权重/权限与 CUDA 工具链（GPU 路线）。
+
 ## 3. 结果
 
 ### 3.1 Table 2（WikiText-2 PPL）
