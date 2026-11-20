@@ -58,11 +58,12 @@ bash scripts/fig16.sh
 | GPU | `nvidia-smi`：RTX 4090，24 GB（非 A6000 48 GB） | 8B 勉强可试；70B 参考配置为 48 GB + offload，24 GB 不足/风险高 |
 | CUDA 工具链 | `nvcc` 不存在；PyTorch 未安装 | 不满足 A-1 扩展编译 |
 | LLaMA 权重/权限 | HF cache 仅 21 MB（DeepSeek GGUF/WikiText），无 LLaMA-3.1；无 HF token | 不满足 Table 2/3/5 的 fresh GPU run |
-| 28nm EDA | `vmrun list` 为空；仅 4 GB `ai-client` VM；主机无 `dc_shell`/`/home/synopsys` | 不满足 DC 综合 |
-| Catapult HLS | 未安装 | 不满足 OzCore HLS 设计（artifact 的 OzCore stages 由 Catapult 生成） |
-| 28nm FDSOI NDA 库 | 无；此前用的是 TSMC 28nm HPC+，不是 FDSOI | 不满足论文面积口径 |
+| 28nm EDA | 已找到并启动 `IC_EDA` VM（`Graduationthesis/.../CentOS_Dig_Ana/IC_EDA.vmx`）；VM 内有 DC + TSMC 28nm HPC+ | **部分满足**：可做 TSMC 28nm 替代综合，不是论文的 FDSOI 口径 |
+| Catapult HLS | VM 内未找到 `catapult` | 不满足 OzCore HLS 设计（artifact 的 OzCore stages 由 Catapult 生成） |
+| 28nm FDSOI NDA 库 | 无；VM 内是 TSMC 28nm HPC+ + SMIC 28nm HPC | 不满足论文面积口径；替代综合只能验证趋势 |
+| 网络 | GitHub clone 超时；Hugging Face 请求超时 | Vortex 头文件/LLaMA 权重无法在本环境直接拉取 |
 
-因此，本报告说的“不能复现”是**不能复现 artifact 的精确条件**，不是“本机完全没有硬件”。具体地：
+因此，本报告说的“不能复现”是**不能复现 artifact 的精确条件**，不是“本机完全没有硬件”。已启动的 EDA VM 能提供 DC + TSMC 28nm HPC+，但 artifact 的 OzCore 面积来自 Catapult HLS + 28nm FDSOI；两者不能混为同一口径。具体地：
 
 - **GPU**：4090 24 GB 可以尝试 8B 的 A-1 路径（若安装 CUDA toolkit/PyTorch 并提供 LLaMA-3.1-8B 的 HF 权限/权重），但 70B 的 48 GB 参考配置不满足；Table 3 还需要 lm-eval 全量评估。
 - **28nm**：即使有 DC + TSMC 28nm HPC+，也只能做**替代工艺**的 Ten-four RTL 综合（还需 Vortex 头文件），不能复现 OzCore 的 Catapult HLS stages 与 FDSOI 面积；论文的 27.9%/1.91×/1.40× 仍不可独立验证。
