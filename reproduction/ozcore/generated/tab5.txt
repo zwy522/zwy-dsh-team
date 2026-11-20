@@ -1,0 +1,23 @@
+Table 5 -- WikiText-2 PPL, OzCore GEMM on quantized LLaMA-3.1-8B (k=128)
+seqlen=2048, n=141; PPL = exp(sum(nll)/(n*seqlen)); computed from data/emulation/tab5/
+------------------------------------------------------------
+[FP8 weights (compressed-tensors)]
+   dequant_ref (FP ref)  :     6.296
+   OzCore s=2            :     6.414
+   OzCore s=3            :     6.293
+   OzCore s=4            :     6.294
+   (also present, outside the range Table 5 reports: s=6, 12)
+
+[FP x INT8 (group size 128)]  model *-8bit-128g-*
+   dequant_ref (FP ref)  :     6.238
+   fpint (FPxINT base)   :     6.238
+   OzCore s=2            :     6.382
+   OzCore s=3            :     6.238
+   OzCore s=4            :     6.238
+
+[FP x INT4 (group size 128)]  model *-4bit-128g-*
+   dequant_ref (FP ref)  :     6.831
+   fpint (FPxINT base)   :     6.828
+   OzCore s=2            :     7.109
+   OzCore s=3            :     6.837
+   OzCore s=4            :     6.832
