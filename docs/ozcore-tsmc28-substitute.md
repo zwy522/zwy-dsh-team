@@ -31,9 +31,13 @@
 
 ## 3. FP16 变体
 
-FP16 Ten-four（artifact 134,284.7 µm²/column）正在同一流程下综合；
-需要 `VX_lzc`/`VX_wallace_mul`/`VX_find_first` 等额外依赖，DC 运行时间明显更长。
-完成后会补上 TSMC/FDSOI 比值与 FP16/INT8 融合税对比。
+FP16 Ten-four（artifact 134,284.7 µm²/column）的替代综合**未得到可靠结果**：
+
+- `compile_ultra` 版本运行 25+ 分钟仍在 mapping，未写出最终 area；
+- 改用 `compile -map_effort medium` 后，DC 产出的 area 报告为未映射/generic（`Total cell area 0.000000`，699,828 cells），不能作为面积数据；
+- 因此本报告只给出 INT8 的可靠替代结果；FP16 需要更长的 DC 运行时间或调整 flow 后重跑，不能用当前中间值代替。
+
+INT8 结果已足够验证：同一 RTL 在 TSMC 28nm HPC+ 与论文 FDSOI 上面积相差 5.1%，说明 RTL/流程可复现；FP16/INT8 融合税对比留待后续。
 
 ## 4. 复现
 
