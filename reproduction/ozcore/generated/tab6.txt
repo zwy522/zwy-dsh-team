@@ -1,0 +1,13 @@
+Table 6 -- MX formats vs OzCore (computed | paper)
+relative L2: min-max over phi in [0.1, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0], BF16-input 128^3 random GEMMs vs FP64
+PPL: WikiText-2, n=141, seqlen=2048
+------------------------------------------------------------------------
+Format           relative L2 error                               PPL
+OzCore ($s$=3)   2.2--4.2e-03| 2.2--4.2e-03               6.24| 6.24
+OzCore ($s$=2)   2.5--4.4e-02| 2.5--4.4e-02               6.36| 6.36
+MXFP8 (E4M3)     4.4--6.9e-02| 4.4--6.9e-02               6.51| 6.51
+MXFP8 (E5M2)     7.4--9.5e-02| 7.4--9.5e-02               6.87| 6.87
+MXFP4 (E2M1)     1.5--2.2e-01| 1.5--2.2e-01             25.61| 25.61
+------------------------------------------------------------------------
+L2 from data/emulation/tab6/phi_l2.json; MX PPL from tab6/ppl_mx*.json;
+OzCore PPL from data/emulation/tab2/ (the same cells Table 2 reports).
