@@ -13,14 +13,20 @@ module ozcore_top_int8 #(
     input  logic [S_MAX*K*16-1:0] weight_flat, // low byte of each 16-bit int slot
     input  logic act_valid,
     input  logic [S_MAX*K*16-1:0] act_flat,
+    input  logic out_ready,
     output logic out_valid,
-    output logic [S_MAX*N*32-1:0] out_flat // [slot c][column n][31:0]
+    output logic [S_MAX*N*32-1:0] out_flat, // [slot c][column n][31:0]
+    output logic weight_ready,
+    output logic act_ready
 );
     logic signed [7:0] w_mem [N][S_MAX][K];
     logic signed [7:0] act [S_MAX][K];
     logic signed [31:0] acc [N][S_MAX];
 
     integer n, c, j;
+    assign weight_ready = 1'b1;
+    assign act_ready = ~out_valid | out_ready;
+
     always_ff @(posedge clk) begin
         if (rst) begin
             out_valid <= 1'b0;
@@ -32,7 +38,7 @@ module ozcore_top_int8 #(
                         w_mem[weight_col][c][j] <= weight_flat[(c*K+j)*16 +: 8];
             end
 
-            if (act_valid) begin
+            if (act_valid && act_ready) begin
                 for (c = 0; c < S_MAX; c++)
                     for (j = 0; j < K; j++)
                         act[c][j] <= act_flat[(c*K+j)*16 +: 8];
@@ -48,7 +54,7 @@ module ozcore_top_int8 #(
                     for (c = 0; c < S_MAX; c++)
                         out_flat[(c*N+n)*32 +: 32] <= acc[n][c];
                 out_valid <= 1'b1;
-            end else begin
+            end else if (out_valid && out_ready) begin
                 out_valid <= 1'b0;
             end
         end
