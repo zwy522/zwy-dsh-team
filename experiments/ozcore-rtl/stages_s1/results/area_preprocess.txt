@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : ozcore_preprocess_s1
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 20:05:39 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'ozcore_preprocess_s1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                         3078
+Number of nets:                          3346
+Number of cells:                         2318
+Number of combinational cells:           1293
+Number of sequential cells:              1025
+Number of macros/black boxes:               0
+Number of buf/inv:                        265
+Number of references:                       9
+
+Combinational area:                865.997981
+Buf/Inv area:                       89.711999
+Noncombinational area:            1937.249985
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  2803.247966
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+ozcore_preprocess_s1              2803.2480    100.0  865.9980  1937.2500  0.0000  ozcore_preprocess_s1
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+Total                                                 865.9980  1937.2500  0.0000
+
+1

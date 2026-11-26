@@ -110,6 +110,25 @@
 - 估算：K=128 单 engine（1,536 MAC）实测 334,190.30 µm²；16,384 MAC 线性缩放 **≈3.56 mm²**，加权重/控制约 **3.6–4.0 mm²**（非综合值）。
 - 之前的 47.10 mm² 是 12-lane 全并行（196,608 物理乘法器），不属于单模数范围。
 
+## 5.4 单模数 pre/post/MAC 分块综合（2026-11-26）
+
+TSMC 28nm HPC+、medium effort：
+
+| Block | Cells | Area |
+|---|---:|---:|
+| preprocess（K=128,128 lanes,16→8） | 2,318 | 2,803.25 µm² |
+| postprocess（K=128,128 lanes,int32 bypass） | 9,040 | 11,119.37 µm² |
+| MAC column（K=128=128 MACs） | 29,075 | 27,831.51 µm² |
+| lane（pre+MAC+post） | 33,994 | 33,607.98 µm² |
+
+单模数 128×128 组合（分块求和，不是整 top 综合）：
+- MAC array 128×27,831.51 = **3.5624 mm²**；
+- + 单 act preprocess + postprocess = **3.5764 mm²**（乐观，权重 preprocess 共享/时分）；
+- + 128 个 weight preprocess = **3.9352 mm²**；
+- 每 lane 全并行上界 128×33,607.98 = **4.3018 mm²**。
+
+VCS：pre/post/MAC/lane **全部通过**。16,384 MAC 整 top DC 仍不可行（43 min 未出）；control/weight memory/aligner 未单独计入。
+
 ## 6. 预计工期（缩减 INT8 全加速器）
 
 以“K=8、N=4、S_MAX=12、INT8 主路径、单个 OzCore 实例”为目标，按当前已验证的 RTL/VCS/DC 流程估算（工作日，非承诺）：

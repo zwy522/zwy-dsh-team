@@ -1,0 +1,367 @@
+ 
+****************************************
+Report : area
+Design : ozcore_mac_col_s1
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 20:07:03 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                        18340
+Number of nets:                         53222
+Number of cells:                        29075
+Number of combinational cells:          28752
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                       2625
+Number of references:                     208
+
+Combinational area:              27831.509795
+Buf/Inv area:                      661.500011
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 27831.509795
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  -------------------------------
+ozcore_mac_col_s1                 27831.5098    100.0   2737.2241     0.0000  0.0000  ozcore_mac_col_s1
+add_0_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_0
+add_10_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_10
+add_11_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_11
+add_123_root_add_10_I128             41.7060      0.1     41.7060     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_243
+add_124_root_add_10_I128             39.5640      0.1     39.5640     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_246
+add_125_root_add_10_I128             37.4220      0.1     37.4220     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_249
+add_126_root_add_10_I128             35.2800      0.1     35.2800     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_252
+add_12_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_12
+add_13_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_13
+add_14_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_14
+add_15_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_15
+add_16_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_16
+add_17_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_17
+add_18_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_18
+add_19_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_19
+add_1_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_1
+add_20_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_20
+add_21_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_21
+add_22_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_22
+add_23_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_23
+add_24_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_24
+add_25_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_25
+add_26_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_26
+add_27_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_27
+add_28_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_28
+add_29_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_29
+add_2_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_2
+add_30_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_30
+add_31_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_31
+add_32_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_32
+add_33_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_33
+add_34_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_34
+add_35_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_35
+add_36_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_36
+add_37_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_37
+add_38_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_38
+add_39_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_39
+add_3_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_3
+add_40_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_40
+add_41_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_41
+add_42_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_42
+add_43_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_43
+add_44_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_44
+add_45_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_45
+add_46_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_46
+add_47_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_47
+add_48_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_48
+add_49_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_49
+add_4_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_4
+add_50_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_50
+add_51_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_51
+add_52_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_52
+add_53_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_53
+add_54_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_54
+add_55_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_55
+add_56_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_56
+add_57_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_57
+add_58_root_add_10_I128              67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_58
+add_59_root_add_10_I128              54.1800      0.2     54.1800     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_59
+add_5_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_5
+add_60_root_add_10_I128              49.6440      0.2     49.6440     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_60
+add_61_root_add_10_I128              45.3600      0.2     45.3600     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_61
+add_62_root_add_10_I128              41.0760      0.1     41.0760     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_62
+add_6_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_6
+add_7_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_7
+add_8_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_8
+add_9_root_add_10_I128               67.4100      0.2     67.4100     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_9
+mult_10_3                           162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_127
+mult_10_3/FS_1                       19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_254
+mult_10_3_I10                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_118
+mult_10_3_I10/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_241
+mult_10_3_I100                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_28
+mult_10_3_I100/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_106
+mult_10_3_I101                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_27
+mult_10_3_I101/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_104
+mult_10_3_I102                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_26
+mult_10_3_I102/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_103
+mult_10_3_I103                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_25
+mult_10_3_I103/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_101
+mult_10_3_I104                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_24
+mult_10_3_I104/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_100
+mult_10_3_I105                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_23
+mult_10_3_I105/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_98
+mult_10_3_I106                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_22
+mult_10_3_I106/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_97
+mult_10_3_I107                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_21
+mult_10_3_I107/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_95
+mult_10_3_I108                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_20
+mult_10_3_I108/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_94
+mult_10_3_I109                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_19
+mult_10_3_I109/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_92
+mult_10_3_I11                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_117
+mult_10_3_I11/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_239
+mult_10_3_I110                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_18
+mult_10_3_I110/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_91
+mult_10_3_I111                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_17
+mult_10_3_I111/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_89
+mult_10_3_I112                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_16
+mult_10_3_I112/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_88
+mult_10_3_I113                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_15
+mult_10_3_I113/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_86
+mult_10_3_I114                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_14
+mult_10_3_I114/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_85
+mult_10_3_I115                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_13
+mult_10_3_I115/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_83
+mult_10_3_I116                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_12
+mult_10_3_I116/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_82
+mult_10_3_I117                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_11
+mult_10_3_I117/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_80
+mult_10_3_I118                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_10
+mult_10_3_I118/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_79
+mult_10_3_I119                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_9
+mult_10_3_I119/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_77
+mult_10_3_I12                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_116
+mult_10_3_I12/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_238
+mult_10_3_I120                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_8
+mult_10_3_I120/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_76
+mult_10_3_I121                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_7
+mult_10_3_I121/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_74
+mult_10_3_I122                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_6
+mult_10_3_I122/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_73
+mult_10_3_I123                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_5
+mult_10_3_I123/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_71
+mult_10_3_I124                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_4
+mult_10_3_I124/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_70
+mult_10_3_I125                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_3
+mult_10_3_I125/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_68
+mult_10_3_I126                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_2
+mult_10_3_I126/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_67
+mult_10_3_I127                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_1
+mult_10_3_I127/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_65
+mult_10_3_I128                      162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_0
+mult_10_3_I128/FS_1                  19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_64
+mult_10_3_I13                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_115
+mult_10_3_I13/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_236
+mult_10_3_I14                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_114
+mult_10_3_I14/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_235
+mult_10_3_I15                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_113
+mult_10_3_I15/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_233
+mult_10_3_I16                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_112
+mult_10_3_I16/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_232
+mult_10_3_I17                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_111
+mult_10_3_I17/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_230
+mult_10_3_I18                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_110
+mult_10_3_I18/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_229
+mult_10_3_I19                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_109
+mult_10_3_I19/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_227
+mult_10_3_I2                        162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_126
+mult_10_3_I2/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_253
+mult_10_3_I20                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_108
+mult_10_3_I20/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_226
+mult_10_3_I21                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_107
+mult_10_3_I21/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_224
+mult_10_3_I22                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_106
+mult_10_3_I22/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_223
+mult_10_3_I23                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_105
+mult_10_3_I23/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_221
+mult_10_3_I24                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_104
+mult_10_3_I24/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_220
+mult_10_3_I25                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_103
+mult_10_3_I25/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_218
+mult_10_3_I26                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_102
+mult_10_3_I26/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_217
+mult_10_3_I27                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_101
+mult_10_3_I27/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_215
+mult_10_3_I28                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_100
+mult_10_3_I28/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_214
+mult_10_3_I29                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_99
+mult_10_3_I29/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_212
+mult_10_3_I3                        162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_125
+mult_10_3_I3/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_251
+mult_10_3_I30                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_98
+mult_10_3_I30/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_211
+mult_10_3_I31                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_97
+mult_10_3_I31/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_209
+mult_10_3_I32                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_96
+mult_10_3_I32/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_208
+mult_10_3_I33                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_95
+mult_10_3_I33/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_206
+mult_10_3_I34                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_94
+mult_10_3_I34/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_205
+mult_10_3_I35                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_93
+mult_10_3_I35/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_203
+mult_10_3_I36                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_92
+mult_10_3_I36/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_202
+mult_10_3_I37                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_91
+mult_10_3_I37/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_200
+mult_10_3_I38                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_90
+mult_10_3_I38/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_199
+mult_10_3_I39                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_89
+mult_10_3_I39/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_197
+mult_10_3_I4                        162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_124
+mult_10_3_I4/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_250
+mult_10_3_I40                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_88
+mult_10_3_I40/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_196
+mult_10_3_I41                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_87
+mult_10_3_I41/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_194
+mult_10_3_I42                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_86
+mult_10_3_I42/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_193
+mult_10_3_I43                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_85
+mult_10_3_I43/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_191
+mult_10_3_I44                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_84
+mult_10_3_I44/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_190
+mult_10_3_I45                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_83
+mult_10_3_I45/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_188
+mult_10_3_I46                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_82
+mult_10_3_I46/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_187
+mult_10_3_I47                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_81
+mult_10_3_I47/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_185
+mult_10_3_I48                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_80
+mult_10_3_I48/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_184
+mult_10_3_I49                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_79
+mult_10_3_I49/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_182
+mult_10_3_I5                        162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_123
+mult_10_3_I5/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_248
+mult_10_3_I50                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_78
+mult_10_3_I50/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_181
+mult_10_3_I51                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_77
+mult_10_3_I51/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_179
+mult_10_3_I52                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_76
+mult_10_3_I52/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_178
+mult_10_3_I53                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_75
+mult_10_3_I53/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_176
+mult_10_3_I54                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_74
+mult_10_3_I54/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_175
+mult_10_3_I55                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_73
+mult_10_3_I55/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_173
+mult_10_3_I56                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_72
+mult_10_3_I56/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_172
+mult_10_3_I57                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_71
+mult_10_3_I57/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_170
+mult_10_3_I58                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_70
+mult_10_3_I58/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_169
+mult_10_3_I59                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_69
+mult_10_3_I59/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_167
+mult_10_3_I6                        162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_122
+mult_10_3_I6/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_247
+mult_10_3_I60                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_68
+mult_10_3_I60/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_166
+mult_10_3_I61                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_67
+mult_10_3_I61/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_164
+mult_10_3_I62                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_66
+mult_10_3_I62/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_163
+mult_10_3_I63                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_65
+mult_10_3_I63/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_161
+mult_10_3_I64                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_64
+mult_10_3_I64/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_160
+mult_10_3_I65                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_63
+mult_10_3_I65/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_158
+mult_10_3_I66                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_62
+mult_10_3_I66/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_157
+mult_10_3_I67                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_61
+mult_10_3_I67/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_155
+mult_10_3_I68                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_60
+mult_10_3_I68/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_154
+mult_10_3_I69                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_59
+mult_10_3_I69/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_152
+mult_10_3_I7                        162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_121
+mult_10_3_I7/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_245
+mult_10_3_I70                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_58
+mult_10_3_I70/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_151
+mult_10_3_I71                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_57
+mult_10_3_I71/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_149
+mult_10_3_I72                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_56
+mult_10_3_I72/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_148
+mult_10_3_I73                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_55
+mult_10_3_I73/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_146
+mult_10_3_I74                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_54
+mult_10_3_I74/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_145
+mult_10_3_I75                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_53
+mult_10_3_I75/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_143
+mult_10_3_I76                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_52
+mult_10_3_I76/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_142
+mult_10_3_I77                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_51
+mult_10_3_I77/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_140
+mult_10_3_I78                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_50
+mult_10_3_I78/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_139
+mult_10_3_I79                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_49
+mult_10_3_I79/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_137
+mult_10_3_I8                        162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_120
+mult_10_3_I8/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_244
+mult_10_3_I80                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_48
+mult_10_3_I80/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_136
+mult_10_3_I81                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_47
+mult_10_3_I81/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_134
+mult_10_3_I82                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_46
+mult_10_3_I82/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_133
+mult_10_3_I83                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_45
+mult_10_3_I83/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_131
+mult_10_3_I84                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_44
+mult_10_3_I84/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_130
+mult_10_3_I85                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_43
+mult_10_3_I85/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_128
+mult_10_3_I86                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_42
+mult_10_3_I86/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_127
+mult_10_3_I87                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_41
+mult_10_3_I87/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_125
+mult_10_3_I88                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_40
+mult_10_3_I88/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_124
+mult_10_3_I89                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_39
+mult_10_3_I89/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_122
+mult_10_3_I9                        162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_119
+mult_10_3_I9/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_242
+mult_10_3_I90                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_38
+mult_10_3_I90/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_121
+mult_10_3_I91                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_37
+mult_10_3_I91/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_119
+mult_10_3_I92                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_36
+mult_10_3_I92/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_118
+mult_10_3_I93                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_35
+mult_10_3_I93/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_116
+mult_10_3_I94                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_34
+mult_10_3_I94/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_115
+mult_10_3_I95                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_33
+mult_10_3_I95/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_113
+mult_10_3_I96                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_32
+mult_10_3_I96/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_112
+mult_10_3_I97                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_31
+mult_10_3_I97/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_110
+mult_10_3_I98                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_30
+mult_10_3_I98/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_109
+mult_10_3_I99                       162.2880      0.6    142.3800     0.0000  0.0000  ozcore_mac_col_s1_DW02_mult_29
+mult_10_3_I99/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_mac_col_s1_DW01_add_107
+--------------------------------  ----------  -------  ----------  ---------  ------  -------------------------------
+Total                                                  27831.5098     0.0000  0.0000
+
+1
