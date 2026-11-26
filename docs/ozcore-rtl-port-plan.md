@@ -129,6 +129,16 @@ TSMC 28nm HPC+、medium effort：
 
 VCS：pre/post/MAC/lane **全部通过**。16,384 MAC 整 top DC 仍不可行（43 min 未出）；control/weight memory/aligner 未单独计入。
 
+## 5.5 单模数 core 缺失块综合与 pre-layout 全核预算（2026-11-27）
+
+- weight memory 1KB（N=128,K=8）25,690.27 µm²；16KB 按 16× 估 411,044.24 µm²（推断寄存器，不是 SRAM）。
+- psum 128×32：11,213.87 µm²；aligner 128×32：11,119.37 µm²；control 最小 FSM：12.35 µm²。
+- 已有：pre 2,803.25、post 11,119.37、MAC column 27,831.51、lane 33,607.98 µm²。
+- 单模数 128×128 pre-layout 合计：
+  MAC 3.5624 + act pre 0.0028 + post 0.0111 + 128 weight pre 0.3588 + weight mem 0.4110 + psum 0.0112 + aligner 0.0111 + control 0.000012
+  = **4.3686 mm²**。
+- 物理开销因子 1.25–1.40 → **5.46–6.12 mm²**；1.38 → 6.03 mm²，但 1.38 是假设，不是 CTS 实测。当前无 LEF/TLU+，无法做物理实现。
+
 ## 6. 预计工期（缩减 INT8 全加速器）
 
 以“K=8、N=4、S_MAX=12、INT8 主路径、单个 OzCore 实例”为目标，按当前已验证的 RTL/VCS/DC 流程估算（工作日，非承诺）：
