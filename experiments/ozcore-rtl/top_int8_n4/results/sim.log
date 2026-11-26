@@ -1,0 +1,11 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Nov 26 13:23 2026
+TOP_INT8: cases=5 errors=0
+TOP_INT8: PASS
+$finish called from file "top_int8_n4/tb/tb_ozcore_top_int8_n4.sv", line 40.
+$finish at simulation time                96000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 96000 ps
+CPU Time:      0.190 seconds;       Data structure size:   0.2Mb
+Thu Nov 26 13:23:51 2026

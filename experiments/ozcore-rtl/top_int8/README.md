@@ -19,8 +19,9 @@ preprocess INT8 pass-through (low byte of 16-bit slot)
 | Item | Value |
 |---|---:|
 | Functional | **5/5 PASS**, 0 errors (VCS O-2018.09-SP2) |
+| Handshake | `weight_ready`/`act_ready`/`out_ready` valid-ready added; N=2/4/8 all pass |
 | Configuration | K=128, N=2, S_MAX=12, INT8×INT8 |
-| Area | **735,954.15 µm²** (726,372 cells), combinational |
+| Area | **735,954.15 µm²** (726,372 cells), combinational (pre-handshake) |
 
 **Scaling:** 735,954.15 / 2 = 367,977.07 µm² per column; 128 columns
 → **47.10 mm²**. Artifact `simd_engine` sanitized stage is 52.147 mm² (ratio 0.903).

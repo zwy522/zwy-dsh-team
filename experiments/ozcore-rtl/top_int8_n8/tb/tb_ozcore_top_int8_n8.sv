@@ -2,11 +2,11 @@
 module tb_ozcore_top_int8_n8;
     localparam int K=128, N=8, S=12;
     localparam int INW=S*K*16, OUTW=S*N*32;
-    logic clk=0, rst=1, weight_valid=0, act_valid=0;
+    logic clk=0, rst=1, weight_valid=0, act_valid=0, out_ready=1;
     logic [$clog2(N)-1:0] weight_col;
     logic [INW-1:0] weight_flat, act_flat;
     logic [OUTW-1:0] out_flat;
-    logic out_valid;
+    logic out_valid, weight_ready, act_ready;
 
     ozcore_top_int8 #(.K(K),.N(N),.S_MAX(S)) dut (.*);
 
