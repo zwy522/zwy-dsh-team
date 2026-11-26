@@ -25,15 +25,17 @@ module tb_ozcore_top_int8;
             weight_col=n; weight_flat=wtmp; weight_valid=1;
             @(posedge clk); #1; weight_valid=0;
         end
-        if ($fscanf(fd,"%h\n",xtmp) != 1) $fatal;
-        if ($fscanf(fd,"%h\n",exp_out) != 1) $fatal;
-        act_flat=xtmp; act_valid=1;
-        @(posedge clk); #1; act_valid=0;
-        if (!out_valid || out_flat !== exp_out) begin
-            errs++;
-            $display("MISMATCH out_valid=%b\n got=%h\n exp=%h", out_valid, out_flat, exp_out);
+        for (n=0; n<5; n++) begin
+            if ($fscanf(fd,"%h\n",xtmp) != 1) $fatal;
+            if ($fscanf(fd,"%h\n",exp_out) != 1) $fatal;
+            act_flat=xtmp; act_valid=1;
+            @(posedge clk); #1; act_valid=0;
+            if (!out_valid || out_flat !== exp_out) begin
+                errs++;
+                $display("MISMATCH case %0d out_valid=%b\n got=%h\n exp=%h", n, out_valid, out_flat, exp_out);
+            end
         end
-        $display("TOP_INT8: errors=%0d", errs);
+        $display("TOP_INT8: cases=5 errors=%0d", errs);
         if (errs==0) $display("TOP_INT8: PASS"); else $display("TOP_INT8: FAIL");
         $finish;
     end

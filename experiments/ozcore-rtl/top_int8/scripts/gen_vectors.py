@@ -14,16 +14,16 @@ W=[]
 for n in range(N):
     w=[[random.randint(-128,127) for _ in range(K)] for _ in range(S)]
     W.append(w); lines.append(pack(w))
-# activation
-X=[[random.randint(-128,127) for _ in range(K)] for _ in range(S)]
-lines.append(pack(X))
-# expected out [slot][col]
-xout=0; exp=[]
-for c in range(S):
-    for n in range(N):
-        a=sum(W[n][c][j]*X[c][j] for j in range(K))
-        exp.append(a); xout |= u(a,32) << ((c*N+n)*32)
-lines.append(f"{xout:0{(S*N*32)//4}x}")
+# 5 activation frames
+for case in range(5):
+    X=[[random.randint(-128,127) for _ in range(K)] for _ in range(S)]
+    lines.append(pack(X))
+    xout=0; exp=[]
+    for c in range(S):
+        for n in range(N):
+            a=sum(W[n][c][j]*X[c][j] for j in range(K))
+            exp.append(a); xout |= u(a,32) << ((c*N+n)*32)
+    lines.append(f"{xout:0{(S*N*32)//4}x}")
 out=os.path.join(os.path.dirname(__file__),"..","tb","vectors.txt")
 open(out,"w").write("\n".join(lines)+"\n")
-print("wrote",out,"N",N,"K",K,"expected",exp[:4],"...")
+print("wrote",out,"N",N,"K",K,"cases",5)

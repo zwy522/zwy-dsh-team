@@ -10,7 +10,7 @@ preprocess INT8 pass-through (low byte of 16-bit slot)
 ```
 
 - `rtl/ozcore_top_int8.sv`: single-cycle compute; weight memory per column; preprocess/pass-through; bypass output.
-- `tb/tb_ozcore_top_int8.sv`: loads N weight frames, one activation frame, checks all 12×N int32 outputs vs Python golden.
+- `tb/tb_ozcore_top_int8.sv`: loads N weight frames, 5 activation frames, checks all 12×N int32 outputs vs Python golden.
 - `scripts/gen_vectors.py`: K=128, N=2, 12 planes; Python golden.
 - `scripts/run_dc_top_int8.tcl`: DC/TSMC 28nm.
 
@@ -18,7 +18,7 @@ preprocess INT8 pass-through (low byte of 16-bit slot)
 
 | Item | Value |
 |---|---:|
-| Functional | **PASS**, 0 errors (VCS O-2018.09-SP2) |
+| Functional | **5/5 PASS**, 0 errors (VCS O-2018.09-SP2) |
 | Configuration | K=128, N=2, S_MAX=12, INT8×INT8 |
 | Area | pending DC; see `results/area.txt` when complete |
 
