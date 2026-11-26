@@ -106,7 +106,7 @@
 
 - 按“暂时只复现单个模数”切范围：16,384 个物理 INT8 MAC（128×128），单 residue pass-through、postprocess bypass、valid-ready。
 - 功能：VCS **5/5 activation frames 通过**。
-- 综合：DC low-effort 运行 43 分钟仍在 mapping，已终止，未得到实际面积。
+- 综合：16,384 MAC 的 DC low-effort 运行 43 分钟仍在 mapping；K=32/N=128 的 4,096 MAC 标定也运行 30 分钟未出面积；两者均终止，未得到实际面积。
 - 估算：K=128 单 engine（1,536 MAC）实测 334,190.30 µm²；16,384 MAC 线性缩放 **≈3.56 mm²**，加权重/控制约 **3.6–4.0 mm²**（非综合值）。
 - 之前的 47.10 mm² 是 12-lane 全并行（196,608 物理乘法器），不属于单模数范围。
 
