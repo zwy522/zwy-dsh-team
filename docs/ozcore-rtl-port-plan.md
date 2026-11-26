@@ -139,6 +139,18 @@ VCS：pre/post/MAC/lane **全部通过**。16,384 MAC 整 top DC 仍不可行（
   = **4.3686 mm²**。
 - 物理开销因子 1.25–1.40 → **5.46–6.12 mm²**；1.38 → 6.03 mm²，但 1.38 是假设，不是 CTS 实测。当前无 LEF/TLU+，无法做物理实现。
 
+## 5.6 完整单 slot（12 moduli，INT8 MAC + CRT + int2fp + control）
+
+- RTL：`experiments/ozcore-rtl/slot_s1/rtl/ozcore_slot_s1.sv`；两个 preprocess → 12-lane K=128 MAC（1,536 MAC）→ 12-modulus CRT/模 P 归约 → int2fp → valid。
+- VCS：5/5 随机向量 **SLOT_FULL PASS**。
+- 分块实测（TSMC 28nm HPC+，medium）：
+  - 12-lane MAC：334,190.30 µm²；
+  - preprocess 33,638.98 µm² ×2 = 67,277.95 µm²；
+  - CRT+int2fp：35,172.65 µm²；
+  - **slot 合计 436,640.90 µm² = 0.4366 mm²**。
+- 128 slot 缩放 ≈ **55.89 mm²**（12-lane 架构，对应 artifact 72.3 mm² 量级；不是 6.03 mm² 单模数口径）。
+- 整 slot flat DC 已启动，面积待出。
+
 ## 6. 预计工期（缩减 INT8 全加速器）
 
 以“K=8、N=4、S_MAX=12、INT8 主路径、单个 OzCore 实例”为目标，按当前已验证的 RTL/VCS/DC 流程估算（工作日，非承诺）：
