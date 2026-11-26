@@ -20,7 +20,12 @@ preprocess INT8 pass-through (low byte of 16-bit slot)
 |---|---:|
 | Functional | **5/5 PASS**, 0 errors (VCS O-2018.09-SP2) |
 | Configuration | K=128, N=2, S_MAX=12, INT8×INT8 |
-| Area | pending DC; see `results/area.txt` when complete |
+| Area | **735,954.15 µm²** (726,372 cells), combinational |
+
+**Scaling:** 735,954.15 / 2 = 367,977.07 µm² per column; 128 columns
+→ **47.10 mm²**. Artifact `simd_engine` sanitized stage is 52.147 mm² (ratio 0.903).
+This is a scaling estimate, not a synthesized 108×128 array; it excludes the
+control/aligner/pipeline and uses a single-cycle combinational datapath.
 
 ## Limitations
 

@@ -92,6 +92,14 @@
 3. `s` 在 preprocess 是 3 bit（s=12 截断为 4），postprocess 是 4 bit；必须统一为 4 bit。
 4. 随附 TB 基本不检查：postprocess 用独立随机 lane（非 CRT 一致），active_outputs 也错；top TB 是 print-only 且 s=12 实际跑成 s=4。SCVerify 只能证明“RTL==HLS”，不能证明 HLS 正确；必须用独立 golden model。
 
+## 5.2 INT8 全路径原型（N=2, K=128）里程碑（2026-11-26）
+
+- `experiments/ozcore-rtl/top_int8/`：preprocess pass-through → N=2×12×K=128 dot products → postprocess bypass → aligner。
+- 功能：N=2 与 N=4 均 **5/5 activation frames 通过**（Python 黄金模型）。
+- 综合（N=2）：**735,954.15 µm² / 726,372 cells**，纯组合。
+- 每列 367,977.07 µm²；128 列缩放估计 **47.10 mm²**，artifact SIMD stage 52.147 mm²（0.903×）。这是缩放估计，不含 control/aligner/pipeline，不是 128×128 实测。
+- 仍未覆盖：CRT/float preprocess/postprocess；valid-ready/pipeline；N=128 全阵列综合。
+
 ## 6. 预计工期（缩减 INT8 全加速器）
 
 以“K=8、N=4、S_MAX=12、INT8 主路径、单个 OzCore 实例”为目标，按当前已验证的 RTL/VCS/DC 流程估算（工作日，非承诺）：
