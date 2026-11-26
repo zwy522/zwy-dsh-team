@@ -67,7 +67,17 @@
 - **时序/面积**：TSMC 28 nm HPC+ DC 综合，报告 area/CP；与 HLS 结果对比，标注库/flow 差异。
 - **覆盖**：INT8 主路径优先；其余变体在 Stage 5 增量验证，不能把“INT8 通过”当成“全部通过”。
 
-## 5. 当前需要的决策/资源
+## 5. 当前进展（2026-11-26）
+
+已完成 Stage 2 的 **INT8 SIMD core 第一版 RTL**（缩减配置 K=8、S_MAX=12，96 个 INT8 乘法器）：
+
+- 功能：VCS 123/123 向量通过（零、±127/-128、随机；Python 黄金模型逐位对比）。
+- 综合：TSMC 28nm HPC+ FF、DC O-2018.06，**19,301.18 µm²**，19,934 cells，纯组合。
+- 位置：`experiments/ozcore-rtl/simd_int8/`。
+- 范围限制：不是完整 `simd_engine_parallel`（无 N 路并行/权重寄存器/通道握手/psum buffer）；不含 FP16/FP8/FP4/FPBF/FP64 变体；无时钟约束，只有面积；与 artifact 52.147 mm² 的 SIMD stage 不可直接比较。
+- 下一步：补 wrapper/权重寄存器/通道握手，再按同一方法做 preprocess、postprocess、top；每步都需要 HLS/C++ 或 Python 黄金模型 + VCS/Verilator 等价验证。
+
+## 6. 当前需要的决策/资源
 
 **A. 提供 Catapult HLS 许可/路径**：可直接用 Catapult 生成 RTL + SCVerify，再跑 DC/TSMC；这是最快且最可靠的路径。
 
