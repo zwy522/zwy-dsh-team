@@ -181,6 +181,20 @@ Artifact sanitized 面积及所占比例如下（总计 72.3 mm²）：
 
 **与论文 27.9% 的差异**：论文称“pre/post 相对 INT8 阵列增加 27.9% 面积”；artifact sanitized 数字算出的 pre+post 相对 SIMD engine 为 **35.98%**（占总面积 25.95%）。两者不能精确对上，可能是归一化基线/面积口径不同（论文可能以另一版本的 INT8 阵列或不同 stage 边界为分母）。在没有原始报告/FDSOI 库的情况下，**不能把 27.9% 当作已复现**；只能报告 artifact 数字及比例，并标注差异。
 
+**能否用 TSMC 28 nm HPC+ 估算 OzCore 整体面积？**
+
+- **Ten-four baseline**：可以，且已经做了——同一份 INT8 RTL 用 DC + TSMC 28 nm HPC+ 综合得到 62,969 µm²，与 FDSOI 59,902 µm² 的比值为 1.051×。这是**实测综合**，不是“模拟”。
+- **OzCore stages**：不能直接跑，因为 artifact 只提供 Catapult HLS 的 C++ 源码，没有提供 RTL；需要 Catapult HLS 先综合出 RTL，再用 DC + TSMC 库综合。当前 EDA VM 没有 Catapult，因此无法得到 OzCore stages 的 TSMC 实测面积。
+- **若只做粗略缩放**：把 Ten-four 的 1.051× 当作“库密度缩放因子”乘到 artifact sanitized 面积上，可得到下表。该表**只是估算**，假设所有 stage（含 SRAM/阵列/控制）按同一比例缩放；实际 SRAM/模拟/阵列的密度缩放不同，不能当作综合结果或论文复现。
+
+| 部分 | FDSOI sanitized（mm²） | TSMC 28nm 粗略缩放（mm²，×1.051） |
+|---|---:|---:|
+| SIMD engine | 52.147 | 54.82 |
+| post_process | 13.800 | 14.50 |
+| preprocess | 4.961 | 5.21 |
+| control_logic | 1.428 | 1.50 |
+| **total** | **72.300** | **76.00** |
+
 **因此**：
 
 - “整体面积 72.3 mm² 及 72.13/19.09/6.86/1.98% 的比例”是 **artifact sanitized 数据的重绘**，不是我们独立综合的结果；
