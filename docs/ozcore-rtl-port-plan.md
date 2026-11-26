@@ -77,7 +77,25 @@
 - 范围限制：不是完整 `simd_engine_parallel`（无 N 路并行/权重寄存器/通道握手/psum buffer）；不含 FP16/FP8/FP4/FPBF/FP64 变体；无时钟约束，只有面积；与 artifact 52.147 mm² 的 SIMD stage 不可直接比较。
 - 下一步：补 wrapper/权重寄存器/通道握手，再按同一方法做 preprocess、postprocess、top；每步都需要 HLS/C++ 或 Python 黄金模型 + VCS/Verilator 等价验证。
 
-## 6. 当前需要的决策/资源
+## 6. 预计工期（缩减 INT8 全加速器）
+
+以“K=8、N=4、S_MAX=12、INT8 主路径、单个 OzCore 实例”为目标，按当前已验证的 RTL/VCS/DC 流程估算（工作日，非承诺）：
+
+| 阶段 | 内容 | 预计 |
+|---|---|---:|
+| SIMD wrapper | 权重寄存器、channel/valid-ready、psum、N 路 | 3–5 天 |
+| preprocess | scaler、取模、shift/pack、接口 | 8–12 天 |
+| postprocess | CRT/模归约、int→FP、舍入 | 8–12 天 |
+| top 集成 | top_parallel、path chooser、output aligner、联调 | 8–12 天 |
+| 回归/综合 | 黄金模型回归、DC/TSMC 面积/CP | 3–5 天 |
+| **合计** | 缩减 INT8 单个实例 | **约 4–8 周** |
+
+- 全参数、六类 SIMD 变体（FP16/FP8/FP4/FPBF/FP64）另计，约 **3–6 个月**。
+- 若提供 Catapult 许可：生成 RTL + SCVerify + DC 面积，约 **1–2 周**。
+- 若只接受“sanitized/缩放估算”：现在即可给 72.3 mm²（artifact 重绘）或 76.0 mm²（×1.051 粗略缩放），但都不是独立综合。
+- 已有的缩减 SIMD core 面积：**19,301.18 µm²**（96 MAC，纯组合）；不是单个 OzCore 总面积。
+
+## 7. 当前需要的决策/资源
 
 **A. 提供 Catapult HLS 许可/路径**：可直接用 Catapult 生成 RTL + SCVerify，再跑 DC/TSMC；这是最快且最可靠的路径。
 
