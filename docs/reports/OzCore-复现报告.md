@@ -161,7 +161,33 @@ done
 2. 说明 Ten-four RTL 与综合流程可复现（在补齐 Vortex 依赖后），TSMC 28 nm 用于替代趋势验证合理；
 3. **不能**把 62,969 当作论文绝对面积：工艺/库/flow 不同（TSMC HPC+ vs FDSOI；DC O-2018.06 vs 论文 DC V-2023.12-SP5-3）。
 
-### 4.3 FP16 变体（未完成）
+### 4.3 OzCore 整体面积：未独立复现；artifact sanitized 比例
+
+**结论：OzCore 整体面积没有独立复现。** Artifact 的 B/C 面积综合需要 Catapult HLS + 28 nm FDSOI NDA 库；当前环境没有 Catapult/FDSOI，只有 TSMC 28 nm HPC+。因此我们只能：
+
+1. 从 artifact 的 sanitized `data/hw/hardware.json` 重绘面积分解（Fig 10 的 replot），不重跑 synthesis；
+2. 用同一份 Ten-four RTL 做 **baseline 的 TSMC 替换综合**（62,969 vs 59,902 µm²，1.051×），但这不是 OzCore stages 的面积。
+
+Artifact sanitized 面积及所占比例如下（总计 72.3 mm²）：
+
+| 部分 | 面积（mm²） | 占总面积 | 相对 SIMD engine |
+|---|---:|---:|---:|
+| SIMD engine（含阵列） | 52.147 | 72.13% | 100% |
+| post_process（CRT/舍入） | 13.800 | 19.09% | 26.46% |
+| preprocess（缩放/取模） | 4.961 | 6.86% | 9.51% |
+| control_logic | 1.428 | 1.98% | 2.74% |
+| **total** | **72.300** | **100%** | — |
+| preprocess + post_process | 18.761 | 25.95% | **35.98%** |
+
+**与论文 27.9% 的差异**：论文称“pre/post 相对 INT8 阵列增加 27.9% 面积”；artifact sanitized 数字算出的 pre+post 相对 SIMD engine 为 **35.98%**（占总面积 25.95%）。两者不能精确对上，可能是归一化基线/面积口径不同（论文可能以另一版本的 INT8 阵列或不同 stage 边界为分母）。在没有原始报告/FDSOI 库的情况下，**不能把 27.9% 当作已复现**；只能报告 artifact 数字及比例，并标注差异。
+
+**因此**：
+
+- “整体面积 72.3 mm² 及 72.13/19.09/6.86/1.98% 的比例”是 **artifact sanitized 数据的重绘**，不是我们独立综合的结果；
+- “27.9% pre/post overhead” 与 “1.91× TOPS/mm²、1.40× TOPS/W” 仍只能标注“来自作者 sanitized artifact/论文”；
+- 若要独立复现整体面积，需要 Catapult + 28 nm FDSOI 库；当前只有 Ten-four baseline 的 TSMC 替代结果。
+
+### 4.4 FP16 变体（未完成）
 
 - `compile_ultra` 运行 25+ 分钟仍在 mapping，未写出最终 area；
 - 改用 `compile -map_effort medium` 后，DC 产出未映射/generic 报告（`Total cell area 0.000000`，699,828 cells），不能作为面积数据；
