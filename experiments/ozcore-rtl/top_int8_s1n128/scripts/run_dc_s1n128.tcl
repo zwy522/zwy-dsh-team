@@ -1,0 +1,14 @@
+set Design ozcore_top_s1n128
+remove_design -all
+set lib_db "/home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db"
+set target_library $lib_db
+set link_library [list "*" $lib_db]
+set search_path [list . rtl]
+analyze -format sverilog -library WORK rtl/ozcore_top_int8.sv
+analyze -format sverilog -library WORK rtl/ozcore_top_s1n128.sv
+elaborate $Design
+current_design $Design
+link
+compile -map_effort medium
+report_area -nosplit -hierarchy > area.txt
+exit
