@@ -6,7 +6,8 @@
 2. **Fig 16 与论文完全一致**：2.25–2.60× / 1.19–1.44× / 1.00×；Fig 2 的 incremental density 比值 1.00/0.86/0.56/0.47 与论文一致；Fig 3 的 stage 分解为 weight 33–57%、attention 59–81%（论文 35–57%/59–81%，差 2 个百分点）。
 3. **TSMC 28 nm HPC+ 替代综合（Ten-four INT8，K=128）**：面积 **62,969.0 µm²**，对比 artifact 的 FDSOI **59,901.9 µm²**，比值 **1.051×**；63,897 cells，关键路径 1.06 ns（slack +1.64 ns @3.333 ns）。说明同一 RTL/流程可复现，TSMC 替代用于趋势验证合理；但不能当作论文绝对面积。
 4. **FP16 替代综合未得到可靠结果**：`compile_ultra` 运行 25+ 分钟未收敛；`compile -map_effort medium` 产出未映射报告（`Total cell area 0.000000`，699,828 cells），不能作为面积数据。因此本报告只报告 INT8 的可靠替代结果。
-5. **不能复现的部分**：Table 3（无 CPU 数据、仅 GPU regen）、A-1 GPU 数值生成（需 A6000 48 GB、LLaMA 权重/CUDA 扩展）、B/C 面积综合（NDA 28 nm FDSOI + Catapult HLS）、Fig 3 新 trace（只随附 A6000 trace）。
+5. **单 slot 面积重估（2026-11-27）**：按论文 16,384 MAC + 12-pass 口径，单列 MAC 27,831.51 µm² + 共享 12 拍 CRT 26,313.08 µm² = **54,144.59 µm²/slot**；×128 列 = **6.93 mm² 下界**，加 preprocess 约 7.29 mm²；对比论文 6.03 mm² 仍高约 21%，且 control/aligner/CTS 未计、无完整 flat 综合。早期 12-lane 空间并行结果不作为结论。
+6. **不能复现的部分**：Table 3（无 CPU 数据、仅 GPU regen）、A-1 GPU 数值生成（需 A6000 48 GB、LLaMA 权重/CUDA 扩展）、B/C 面积综合（NDA 28 nm FDSOI + Catapult HLS）、Fig 3 新 trace（只随附 A6000 trace）。
 6. **性质**：这是一次 **“artifact 数据/脚本级复现 + 同 RTL 的 TSMC 替代综合”**，不是“从零重跑 GPU 与 FDSOI 综合”的独立复现。论文的 PPL/量化/模型类主张可复核；27.9%/1.91×/1.40× 与 GPU 端到端结果仍依赖作者 sanitized 数据或原环境。
 
 ---
@@ -207,6 +208,38 @@ Artifact sanitized 面积及所占比例如下（总计 72.3 mm²）：
 - 改用 `compile -map_effort medium` 后，DC 产出未映射/generic 报告（`Total cell area 0.000000`，699,828 cells），不能作为面积数据；
 - 因此**不报告 FP16 数值**；需更长 DC 时间或调整 flow 后重跑。
 
+### 4.5 单 OzCore slot 的 TSMC 面积重估（2026-11-27）
+
+**口径修正**：论文的 INT8 GEMM 是 K=N=128、共 **16,384 个 MAC 单元**；12 个模数不是 12 条空间并行 lane，而是**同一个阵列用 12 个 pass 时分复用**。此前把 12 个模数展开成 12 条并行 lane 的 334,190 µm² MAC / 0.4366 mm² slot 属于过度配置，只保留作对照，不作为本节结论。
+
+**已实现的 12-pass slot**（`experiments/ozcore-rtl/slot12_s1/`）：
+
+1. **preprocess**：单 modulus pass 的 residue 生成；m=256 用 mask，奇模用论文的 shift/常量归约；
+2. **INT8 GEMM**：单个 K=128 MAC 列（128 个乘法器）复用 12 个 pass，对应 128 列时正好是 16,384 MAC；
+3. **postprocess**：12 个 residue 点积进入 CRT；CRT 用论文 `red16`（`comp=256-m`，Horner），**无 `/`、无 `%`**；12 个 modulus 用**一个共享 red16 + 一个 96×8 乘法 + 一个 mod-P 累加器**串行 12 拍；最后 int2fp；
+4. **control**：pass FSM + sticky `out_valid`（保持到下一次 start）。
+
+**功能**：5/5 随机向量与 Python golden 的 dot/CRT/float 逐位一致；`SLOT12 PASS`，0 errors。
+
+**分块实测面积**（TSMC 28 nm HPC+，DC O-2018.06-SP1，medium，pre-layout）：
+
+| 项目 | 面积 |
+|---|---:|
+| 单列 K=128 MAC（128 MAC） | 27,831.51 µm² |
+| 共享 12 拍 CRT（red16 + mod-P + int2fp） | 26,313.08 µm² |
+| **单 slot 下界（MAC+CRT）** | **54,144.59 µm² = 0.0541 mm²** |
+| **×128 列（16,384 MAC）** | **6.93 mm² 下界** |
+| + 128 个 weight preprocess + act preprocess | **≈7.29 mm²**（control/aligner 未计） |
+
+**与论文 6.03 mm² 对比**：
+
+- 6.93 mm² 是“MAC 列 + 共享 CRT”的分块下界，不含 control/aligner，也不是完整 16,384 MAC flat 综合；
+- 加 preprocess 后约 7.29 mm²，比论文 6.03 mm² 高约 21%；差距主要来自 control/aligner、流水/CTS，以及 CRT 还可进一步共享/优化；
+- 与早期“12-lane 全并行”的 8.06 mm² 相比，12-pass 共享已把下界降到 6.93 mm²；
+- **没有**完整的 16k flat DC（多次尝试在 mapping 后进程退出），因此 6.93/7.29 只能标注为分块下界/估算，不能写成实测整核面积。
+
+**后续**：补 preprocess 的 peraligner/scale 完整 RTL、control/aligner 面积；把 CRT 的 red16 乘法/共享进一步流水化；再尝试分层综合，目标是把分块下界压到 6.03 mm² 附近并给出完整 flat 面积。
+
 ---
 
 ## 5. 不能复现的部分
@@ -259,7 +292,8 @@ Artifact sanitized 面积及所占比例如下（总计 72.3 mm²）：
 1. **CPU 可验证部分**：Table 2/4/5/6、Fig 2/16 与论文一致或差 ≤0.005；Fig 3/5/10/11/12/13/14/15 可生成且趋势一致。Artifact 达到“可复算/可重绘”的目标。
 2. **面积**：Ten-four INT8 的 TSMC 28 nm 替代综合与 artifact FDSOI 只差 5.1%，说明 RTL/流程可复现、TSMC 替代可用于趋势验证；但 27.9%/1.91×/1.40× 与绝对面积仍只能标注“来自作者 sanitized artifact/论文”，不能写成我们独立复现。
 3. **GPU/系统**：Table 3、Fig 5/14/15 的 fresh GPU 数据与端到端加速比未复现；需要 A6000 48 GB、LLaMA 权重、CUDA 扩展与原 trace。
-4. 若在 OGE/ODA 论文中引用 OzCore，建议写成：“OzCore artifact 的 CPU 表/图已复现；Ten-four INT8 在 TSMC 28 nm HPC+ 上的替代综合面积 62,969 µm²，与论文 FDSOI 差 5.1%；论文面积/GPU 结论仍依赖作者数据。”
+4. **单 slot 面积重估**：按论文 16,384 MAC + 12-pass 口径，单列 MAC 27,831.51 µm² + 共享 12 拍 CRT 26,313.08 µm² = 54,144.59 µm²/slot；×128 列 = 6.93 mm² 下界，加 preprocess 约 7.29 mm²；比论文 6.03 mm² 高约 21%，且 control/aligner/CTS 未计、无完整 flat 综合。该结果只作分块下界，不能写成论文 6.03 mm² 的独立复现。
+5. 若在 OGE/ODA 论文中引用 OzCore，建议写成：“OzCore artifact 的 CPU 表/图已复现；Ten-four INT8 在 TSMC 28 nm HPC+ 上的替代综合面积 62,969 µm²，与论文 FDSOI 差 5.1%；单 slot 按 16,384 MAC/12-pass 分块下界约 54,145 µm²，128 列约 6.93 mm²（不含 control/aligner/CTS，未做完整 flat 综合）；论文面积/GPU 结论仍依赖作者数据。”
 
 ---
 
@@ -272,6 +306,7 @@ Artifact sanitized 面积及所占比例如下（总计 72.3 mm²）：
 | TSMC INT8 脚本/报告 | `reproduction/ozcore/tsmc28/` |
 | CPU 复现报告 | `docs/ozcore-reproduction.md` |
 | TSMC 替代综合报告 | `docs/ozcore-tsmc28-substitute.md` |
+| 单 slot RTL/面积 | `experiments/ozcore-rtl/slot12_s1/` |
 | 本报告 | `docs/reports/OzCore-复现报告.md/.docx/.pdf` |
 
 复现路径：`reproduction/ozcore/`；TSMC 脚本：`reproduction/ozcore/tsmc28/run_dc_int8_n64.tcl`。
