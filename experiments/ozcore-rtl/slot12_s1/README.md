@@ -11,6 +11,17 @@ modulus passes; no 12× spatial multipliers.
 - Data outputs match the Python golden for all 5 cases; the `out_valid` pulse timing in
   the TB still needs a fix (data comparison passes, valid sampling is off by one edge).
 
+## Divider-free CRT (paper method)
+
+- `ozcore_crt_int2fp_s1.sv` now uses the paper's `red16` (`comp = 256-m`, four Horner steps)
+  plus a 32-bit three-limb reduction; **no behavioral `%`/divider remains in the CRT**.
+- VCS data still matches Python golden 5/5; valid sampling still off by one edge.
+- DC `report_area` did not complete (process died after mapping); the last compile table
+  showed ~**49,763 µm²**, so the divider-free version is not yet smaller than the old
+  `%` version (35,172.65 µm²). The Horner multipliers need sharing/pipelining.
+- Slot lower bound with 49,763: 27,831.51 + 49,763 = **77,594.5 µm² = 0.0776 mm²**;
+  ×128 = **9.93 mm²** (worse than the 8.06 mm² behavioral-CRT estimate).
+
 ## Area status
 
 - MAC column (K=128 = 128 MACs): **27,831.51 µm²** (measured).

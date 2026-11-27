@@ -35,12 +35,31 @@ module ozcore_crt_int2fp_s1 (
         endcase
     endfunction
 
-    function automatic int modp(input int v, input int mm);
-        int r;
+    // Paper's divider-free modulo: red16 = new_single_s12 with comp=256-m.
+    function automatic int red16(input int x, input int mm);
+        int comp, q1, q2, q3, q4;
         begin
-            r = v % mm;
-            if (r < 0) r += mm;
-            modp = r;
+            comp = 256 - mm;
+            q1 = comp * (x >> 8)  + (x & 8'hff);
+            q2 = comp * (q1 >> 8) + (q1 & 8'hff);
+            q3 = comp * (q2 >> 8) + (q2 & 8'hff);
+            q4 = comp * (q3 >> 8) + (q3 & 8'hff);
+            red16 = (q4 < mm) ? q4 : (q4 - mm);
+        end
+    endfunction
+
+    // 32-bit signed reduction by three Horner limbs, no divider.
+    function automatic int mod32(input int v, input int mm);
+        int a, r;
+        begin
+            if (mm == 256) mod32 = v & 8'hff;
+            else begin
+                a = (v < 0) ? -v : v;
+                r = red16((a >> 16) & 16'hffff, mm);
+                r = red16(((r << 8) | ((a >> 8) & 8'hff)) & 16'hffff, mm);
+                r = red16(((r << 8) | (a & 8'hff)) & 16'hffff, mm);
+                mod32 = (v < 0 && r != 0) ? (mm - r) : r;
+            end
         end
     endfunction
 
@@ -54,8 +73,8 @@ module ozcore_crt_int2fp_s1 (
         for (j = 0; j < 12; j++) begin
             int mm, iv;
             mm = get_m(j); iv = get_inv(j);
-            rtmp = modp(dots[j*32 +: 32], mm);
-            rtmp = modp(rtmp * iv, mm);
+            rtmp = mod32(dots[j*32 +: 32], mm);
+            rtmp = mod32(rtmp * iv, mm);
             t[j] = rtmp;
             if (t[j] > (mm >> 1)) t[j] = t[j] - mm;
             amyi[j] = $signed(get_mi(j)) * t[j];

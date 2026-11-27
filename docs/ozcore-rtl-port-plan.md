@@ -159,6 +159,13 @@ VCS：pre/post/MAC/lane **全部通过**。16,384 MAC 整 top DC 仍不可行（
 - 分块面积：MAC column 27,831.51 + CRT 35,172.65 = **63,004.16 µm²/slot**（未含 preprocess/FSM）；×128 = **8.06 mm²** 下界。flat slot DC 未完成（内存/时间）。
 - 该 8.06 mm² 高于论文 6.03 mm²，原因是 CRT 仍是行为级 `%`/divider，未做共享/优化；下一步需优化 CRT/模归约后再重综合。
 
+## 5.8 CRT 去行为级除法（论文 red16）
+
+- `ozcore_crt_int2fp_s1.sv` 已把 `%` 替换为论文 `red16`（comp=256-m，四次 Horner）+ 32-bit 三段归约；CRT 内不再有 `/`/`%`。
+- VCS 数据仍 5/5 与 golden 一致。
+- DC `report_area` 未完成（mapping 后进程退出）；最后 compile 表面积约 **49,763 µm²**，比旧 `%` 版 35,172.65 更大；Horner 乘法器需要共享/流水。
+- 单 slot 下界：27,831.51+49,763=**77,594.5 µm²**；×128=**9.93 mm²**（比行为级 CRT 的 8.06 mm² 更差）。
+
 ## 6. 预计工期（缩减 INT8 全加速器）
 
 以“K=8、N=4、S_MAX=12、INT8 主路径、单个 OzCore 实例”为目标，按当前已验证的 RTL/VCS/DC 流程估算（工作日，非承诺）：
