@@ -80,7 +80,7 @@ module ozcore_crt_seq_s1 (
     logic [31:0] t;
     int mm, iv, r;
 
-    assign busy = (j != 0) || out_valid;
+    assign busy = (j != 0);
 
     always_ff @(posedge clk) begin
         if (rst) begin
@@ -101,6 +101,6 @@ module ozcore_crt_seq_s1 (
                 out_valid <= 1'b1;
                 j <= 0;
             end else j <= j + 1;
-        end else out_valid <= 1'b0;
+        end
     end
 endmodule

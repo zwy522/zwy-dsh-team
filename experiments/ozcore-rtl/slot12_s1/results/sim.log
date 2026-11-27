@@ -1,15 +1,11 @@
 Chronologic VCS simulator copyright 1991-2018
 Contains Synopsys proprietary information.
-Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Nov 27 11:24 2026
-SLOT12 FAIL case1 valid=0 got=476b5000 exp=476b5000
-SLOT12 FAIL case2 valid=0 got=46f61a00 exp=46f61a00
-SLOT12 FAIL case3 valid=0 got=4606d400 exp=4606d400
-SLOT12 FAIL case4 valid=0 got=c78d2000 exp=c78d2000
-SLOT12: errors=4
-SLOT12: FAIL
+Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Nov 27 17:57 2026
+SLOT12: errors=0
+SLOT12: PASS
 $finish called from file "slot12_s1/tb/tb_slot12_s1.sv", line 24.
 $finish at simulation time              1405000
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 1405000 ps
-CPU Time:      0.190 seconds;       Data structure size:   0.0Mb
-Fri Nov 27 11:24:10 2026
+CPU Time:      0.220 seconds;       Data structure size:   0.0Mb
+Fri Nov 27 17:57:10 2026

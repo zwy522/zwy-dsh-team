@@ -16,8 +16,8 @@ modulus passes; no 12× spatial multipliers.
 - `ozcore_crt_int2fp_s1.sv` replaces `%` with paper `red16` (`comp=256-m`, Horner).
 - `ozcore_crt_seq_s1.sv` **shares one red16/mod32 unit and one 96×8 multiply over 12 cycles**;
   the slot uses this sequential CRT slot (no 12 parallel CRT datapaths).
-- VCS data: 5/5 match Python golden (the TB `out_valid` sampling still has an off-by-one;
-  data comparison passes).
+- VCS: **SLOT12 PASS 5/5**; `out_valid` is now sticky until the next `start`, fixing the
+  previous off-by-one sampling.
 - Area: sequential shared CRT **26,313.08 µm² / 29,276 cells**, vs 49,763 µm² for the
   parallel divider-free version (≈47% smaller).
 - Slot lower bound: 27,831.51 + 26,313.08 = **54,144.59 µm² = 0.0541 mm²**.

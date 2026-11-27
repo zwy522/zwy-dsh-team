@@ -170,7 +170,7 @@ VCS：pre/post/MAC/lane **全部通过**。16,384 MAC 整 top DC 仍不可行（
 
 - `ozcore_crt_int2fp_s1.sv` 用 `red16`（comp=256-m，Horner）替代 `%`。
 - `ozcore_crt_seq_s1.sv` 用**一个** red16/mod32 + 一个 96×8 乘法，12 个 modulus 串行 12 拍完成；slot 接这个顺序 CRT。
-- VCS 数据 5/5 与 golden 一致；`out_valid` 仍有一处 off-by-one 采样。
+- VCS：**SLOT12 PASS 5/5**；`out_valid` 改为保持到下一次 `start`，off-by-one 已修。
 - 面积：共享 CRT **26,313.08 µm² / 29,276 cells**（并行去除法版 49,763，约小 47%）。
 - 单 slot 下界 27,831.51+26,313.08=**54,144.59 µm²**；×128=**6.93 mm²**；加 128 个 weight preprocess（约 0.36 mm²）≈**7.29 mm²**；仍高于 6.03，control/aligner 未计。
 
