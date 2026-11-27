@@ -151,6 +151,14 @@ VCS：pre/post/MAC/lane **全部通过**。16,384 MAC 整 top DC 仍不可行（
 - 128 slot 缩放 ≈ **55.89 mm²**（12-lane 架构，对应 artifact 72.3 mm² 量级；不是 6.03 mm² 单模数口径）。
 - 整 slot flat DC 已启动，面积待出。
 
+## 5.7 修正后的 12-pass 单列 slot（16,384 MAC 架构）
+
+- 单 K=128 MAC 列复用 12 个 modulus pass（不再 12× 空间并行）。
+- RTL：`experiments/ozcore-rtl/slot12_s1/`；preprocess residue（mask/常量 shift-mod）→ 12 次 residue 点积 → CRT/mod-P/int2fp → pass FSM。
+- 数据：5/5 与 Python golden 一致；`out_valid` 采样时序仍需修。
+- 分块面积：MAC column 27,831.51 + CRT 35,172.65 = **63,004.16 µm²/slot**（未含 preprocess/FSM）；×128 = **8.06 mm²** 下界。flat slot DC 未完成（内存/时间）。
+- 该 8.06 mm² 高于论文 6.03 mm²，原因是 CRT 仍是行为级 `%`/divider，未做共享/优化；下一步需优化 CRT/模归约后再重综合。
+
 ## 6. 预计工期（缩减 INT8 全加速器）
 
 以“K=8、N=4、S_MAX=12、INT8 主路径、单个 OzCore 实例”为目标，按当前已验证的 RTL/VCS/DC 流程估算（工作日，非承诺）：
