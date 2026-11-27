@@ -1,0 +1,220 @@
+ 
+****************************************
+Report : reference
+Design : ozcore_simd_int8
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 08:51:44 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+TIEHBWP40P140      tcbn28hpcplusbwp40p140ffg0p99v0c_ccs
+                                  0.252000       1      0.252000  
+TIELBWP40P140      tcbn28hpcplusbwp40p140ffg0p99v0c_ccs
+                                  0.252000       1      0.252000  
+ozcore_simd_int8_DW01_add_0      18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_1      48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_2      45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_3      43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_4      41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_7      39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_10     37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_13     35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_16     18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_17     48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_18     45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_19     43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_20     41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_23     39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_26     37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_29     35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_32     18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_33     48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_34     45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_35     43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_36     41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_39     39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_42     37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_45     35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_48     18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_49     48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_50     45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_51     43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_52     41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_55     39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_58     37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_61     35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_64     18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_65     48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_66     45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_67     43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_68     41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_71     39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_74     37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_77     35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_80     18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_81     48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_82     45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_83     43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_84     41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_87     39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_90     37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_93     35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_96     18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_97     48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_98     45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_99     43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_100    41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_103    39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_106    37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_109    35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_112    18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_113    48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_114    45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_115    43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_116    41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_119    39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_122    37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_125    35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_128    18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_129    48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_130    45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_131    43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_132    41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_135    39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_138    37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_141    35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_144    18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_145    48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_146    45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_147    43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_148    41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_151    39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_154    37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_157    35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_160    18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_161    48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_162    45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_163    43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_164    41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_167    39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_170    37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_173    35.279999       1     35.279999  h
+ozcore_simd_int8_DW01_add_176    18.144000       1     18.144000  h
+ozcore_simd_int8_DW01_add_177    48.131999       1     48.131999  h
+ozcore_simd_int8_DW01_add_178    45.989999       1     45.989999  h
+ozcore_simd_int8_DW01_add_179    43.847999       1     43.847999  h
+ozcore_simd_int8_DW01_add_180    41.705999       1     41.705999  h
+ozcore_simd_int8_DW01_add_183    39.563999       1     39.563999  h
+ozcore_simd_int8_DW01_add_186    37.421999       1     37.421999  h
+ozcore_simd_int8_DW01_add_189    35.279999       1     35.279999  h
+ozcore_simd_int8_DW02_mult_0    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_1    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_2    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_3    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_4    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_5    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_6    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_7    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_8    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_9    162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_10   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_11   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_12   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_13   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_14   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_15   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_16   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_17   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_18   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_19   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_20   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_21   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_22   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_23   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_24   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_25   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_26   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_27   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_28   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_29   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_30   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_31   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_32   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_33   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_34   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_35   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_36   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_37   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_38   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_39   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_40   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_41   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_42   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_43   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_44   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_45   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_46   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_47   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_48   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_49   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_50   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_51   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_52   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_53   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_54   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_55   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_56   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_57   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_58   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_59   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_60   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_61   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_62   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_63   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_64   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_65   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_66   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_67   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_68   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_69   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_70   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_71   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_72   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_73   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_74   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_75   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_76   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_77   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_78   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_79   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_80   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_81   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_82   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_83   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_84   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_85   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_86   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_87   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_88   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_89   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_90   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_91   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_92   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_93   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_94   162.287998       1    162.287998  h
+ozcore_simd_int8_DW02_mult_95   162.287998       1    162.287998  h
+-----------------------------------------------------------------------------
+Total 194 references                                19301.183801
+1

@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : ozcore_aligner_s1
+Version: O-2018.06-SP1
+Date   : Fri Nov 27 00:10:20 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'ozcore_aligner_s1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                         8198
+Number of nets:                         13140
+Number of cells:                         9040
+Number of combinational cells:           4943
+Number of sequential cells:              4097
+Number of macros/black boxes:               0
+Number of buf/inv:                        843
+Number of references:                       9
+
+Combinational area:               3376.043925
+Buf/Inv area:                      277.325997
+Noncombinational area:            7743.329941
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 11119.373866
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area           Local cell area
+                                  -------------------  ---------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
+                                  Total       Total    national   national   boxes   Design
+--------------------------------  ----------  -------  ---------  ---------  ------  ---------
+ozcore_aligner_s1                 11119.3739    100.0  3376.0439  7743.3299  0.0000  ozcore_aligner_s1
+--------------------------------  ----------  -------  ---------  ---------  ------  ---------
+Total                                                  3376.0439  7743.3299  0.0000
+
+1

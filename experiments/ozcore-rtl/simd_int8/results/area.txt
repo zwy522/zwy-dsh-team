@@ -1,0 +1,332 @@
+ 
+****************************************
+Report : area
+Design : ozcore_simd_int8
+Version: O-2018.06-SP1
+Date   : Thu Nov 26 08:51:44 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                        15192
+Number of nets:                         39110
+Number of cells:                        19934
+Number of combinational cells:          19646
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                       1920
+Number of references:                     194
+
+Combinational area:              19301.183801
+Buf/Inv area:                      483.840008
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 19301.183801
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  -----------------------------
+ozcore_simd_int8                  19301.1838    100.0      0.5040     0.0000  0.0000  ozcore_simd_int8
+add_0_root_add_22_3_I8_I1            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_177
+add_0_root_add_22_3_I8_I10           48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_33
+add_0_root_add_22_3_I8_I11           48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_17
+add_0_root_add_22_3_I8_I12           48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_1
+add_0_root_add_22_3_I8_I2            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_161
+add_0_root_add_22_3_I8_I3            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_145
+add_0_root_add_22_3_I8_I4            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_129
+add_0_root_add_22_3_I8_I5            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_113
+add_0_root_add_22_3_I8_I6            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_97
+add_0_root_add_22_3_I8_I7            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_81
+add_0_root_add_22_3_I8_I8            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_65
+add_0_root_add_22_3_I8_I9            48.1320      0.2     48.1320     0.0000  0.0000  ozcore_simd_int8_DW01_add_49
+add_1_root_add_22_3_I8_I1            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_178
+add_1_root_add_22_3_I8_I10           45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_34
+add_1_root_add_22_3_I8_I11           45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_18
+add_1_root_add_22_3_I8_I12           45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_2
+add_1_root_add_22_3_I8_I2            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_162
+add_1_root_add_22_3_I8_I3            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_146
+add_1_root_add_22_3_I8_I4            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_130
+add_1_root_add_22_3_I8_I5            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_114
+add_1_root_add_22_3_I8_I6            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_98
+add_1_root_add_22_3_I8_I7            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_82
+add_1_root_add_22_3_I8_I8            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_66
+add_1_root_add_22_3_I8_I9            45.9900      0.2     45.9900     0.0000  0.0000  ozcore_simd_int8_DW01_add_50
+add_24                               18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_176
+add_24_I10                           18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_32
+add_24_I11                           18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_16
+add_24_I12                           18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_0
+add_24_I2                            18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_160
+add_24_I3                            18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_144
+add_24_I4                            18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_128
+add_24_I5                            18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_112
+add_24_I6                            18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_96
+add_24_I7                            18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_80
+add_24_I8                            18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_64
+add_24_I9                            18.1440      0.1     18.1440     0.0000  0.0000  ozcore_simd_int8_DW01_add_48
+add_2_root_add_22_3_I8_I1            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_179
+add_2_root_add_22_3_I8_I10           43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_35
+add_2_root_add_22_3_I8_I11           43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_19
+add_2_root_add_22_3_I8_I12           43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_3
+add_2_root_add_22_3_I8_I2            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_163
+add_2_root_add_22_3_I8_I3            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_147
+add_2_root_add_22_3_I8_I4            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_131
+add_2_root_add_22_3_I8_I5            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_115
+add_2_root_add_22_3_I8_I6            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_99
+add_2_root_add_22_3_I8_I7            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_83
+add_2_root_add_22_3_I8_I8            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_67
+add_2_root_add_22_3_I8_I9            43.8480      0.2     43.8480     0.0000  0.0000  ozcore_simd_int8_DW01_add_51
+add_3_root_add_22_3_I8_I1            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_180
+add_3_root_add_22_3_I8_I10           41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_36
+add_3_root_add_22_3_I8_I11           41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_20
+add_3_root_add_22_3_I8_I12           41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_4
+add_3_root_add_22_3_I8_I2            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_164
+add_3_root_add_22_3_I8_I3            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_148
+add_3_root_add_22_3_I8_I4            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_132
+add_3_root_add_22_3_I8_I5            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_116
+add_3_root_add_22_3_I8_I6            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_100
+add_3_root_add_22_3_I8_I7            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_84
+add_3_root_add_22_3_I8_I8            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_68
+add_3_root_add_22_3_I8_I9            41.7060      0.2     41.7060     0.0000  0.0000  ozcore_simd_int8_DW01_add_52
+add_4_root_add_22_3_I8_I1            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_183
+add_4_root_add_22_3_I8_I10           39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_39
+add_4_root_add_22_3_I8_I11           39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_23
+add_4_root_add_22_3_I8_I12           39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_7
+add_4_root_add_22_3_I8_I2            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_167
+add_4_root_add_22_3_I8_I3            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_151
+add_4_root_add_22_3_I8_I4            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_135
+add_4_root_add_22_3_I8_I5            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_119
+add_4_root_add_22_3_I8_I6            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_103
+add_4_root_add_22_3_I8_I7            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_87
+add_4_root_add_22_3_I8_I8            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_71
+add_4_root_add_22_3_I8_I9            39.5640      0.2     39.5640     0.0000  0.0000  ozcore_simd_int8_DW01_add_55
+add_5_root_add_22_3_I8_I1            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_186
+add_5_root_add_22_3_I8_I10           37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_42
+add_5_root_add_22_3_I8_I11           37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_26
+add_5_root_add_22_3_I8_I12           37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_10
+add_5_root_add_22_3_I8_I2            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_170
+add_5_root_add_22_3_I8_I3            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_154
+add_5_root_add_22_3_I8_I4            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_138
+add_5_root_add_22_3_I8_I5            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_122
+add_5_root_add_22_3_I8_I6            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_106
+add_5_root_add_22_3_I8_I7            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_90
+add_5_root_add_22_3_I8_I8            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_74
+add_5_root_add_22_3_I8_I9            37.4220      0.2     37.4220     0.0000  0.0000  ozcore_simd_int8_DW01_add_58
+add_6_root_add_22_3_I8_I1            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_189
+add_6_root_add_22_3_I8_I10           35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_45
+add_6_root_add_22_3_I8_I11           35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_29
+add_6_root_add_22_3_I8_I12           35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_13
+add_6_root_add_22_3_I8_I2            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_173
+add_6_root_add_22_3_I8_I3            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_157
+add_6_root_add_22_3_I8_I4            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_141
+add_6_root_add_22_3_I8_I5            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_125
+add_6_root_add_22_3_I8_I6            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_109
+add_6_root_add_22_3_I8_I7            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_93
+add_6_root_add_22_3_I8_I8            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_77
+add_6_root_add_22_3_I8_I9            35.2800      0.2     35.2800     0.0000  0.0000  ozcore_simd_int8_DW01_add_61
+mult_22_5                           162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_95
+mult_22_5/FS_1                       19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_191
+mult_22_5_I10                       162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_23
+mult_22_5_I10/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_47
+mult_22_5_I11                       162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_15
+mult_22_5_I11/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_31
+mult_22_5_I12                       162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_7
+mult_22_5_I12/FS_1                   19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_15
+mult_22_5_I2                        162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_87
+mult_22_5_I2/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_175
+mult_22_5_I2_I1                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_94
+mult_22_5_I2_I1/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_190
+mult_22_5_I2_I10                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_22
+mult_22_5_I2_I10/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_46
+mult_22_5_I2_I11                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_14
+mult_22_5_I2_I11/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_30
+mult_22_5_I2_I12                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_6
+mult_22_5_I2_I12/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_14
+mult_22_5_I2_I2                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_86
+mult_22_5_I2_I2/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_174
+mult_22_5_I2_I3                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_78
+mult_22_5_I2_I3/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_158
+mult_22_5_I2_I4                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_70
+mult_22_5_I2_I4/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_142
+mult_22_5_I2_I5                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_62
+mult_22_5_I2_I5/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_126
+mult_22_5_I2_I6                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_54
+mult_22_5_I2_I6/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_110
+mult_22_5_I2_I7                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_46
+mult_22_5_I2_I7/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_94
+mult_22_5_I2_I8                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_38
+mult_22_5_I2_I8/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_78
+mult_22_5_I2_I9                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_30
+mult_22_5_I2_I9/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_62
+mult_22_5_I3                        162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_79
+mult_22_5_I3/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_159
+mult_22_5_I3_I1                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_93
+mult_22_5_I3_I1/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_188
+mult_22_5_I3_I10                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_21
+mult_22_5_I3_I10/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_44
+mult_22_5_I3_I11                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_13
+mult_22_5_I3_I11/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_28
+mult_22_5_I3_I12                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_5
+mult_22_5_I3_I12/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_12
+mult_22_5_I3_I2                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_85
+mult_22_5_I3_I2/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_172
+mult_22_5_I3_I3                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_77
+mult_22_5_I3_I3/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_156
+mult_22_5_I3_I4                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_69
+mult_22_5_I3_I4/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_140
+mult_22_5_I3_I5                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_61
+mult_22_5_I3_I5/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_124
+mult_22_5_I3_I6                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_53
+mult_22_5_I3_I6/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_108
+mult_22_5_I3_I7                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_45
+mult_22_5_I3_I7/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_92
+mult_22_5_I3_I8                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_37
+mult_22_5_I3_I8/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_76
+mult_22_5_I3_I9                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_29
+mult_22_5_I3_I9/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_60
+mult_22_5_I4                        162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_71
+mult_22_5_I4/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_143
+mult_22_5_I4_I1                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_92
+mult_22_5_I4_I1/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_187
+mult_22_5_I4_I10                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_20
+mult_22_5_I4_I10/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_43
+mult_22_5_I4_I11                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_12
+mult_22_5_I4_I11/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_27
+mult_22_5_I4_I12                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_4
+mult_22_5_I4_I12/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_11
+mult_22_5_I4_I2                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_84
+mult_22_5_I4_I2/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_171
+mult_22_5_I4_I3                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_76
+mult_22_5_I4_I3/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_155
+mult_22_5_I4_I4                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_68
+mult_22_5_I4_I4/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_139
+mult_22_5_I4_I5                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_60
+mult_22_5_I4_I5/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_123
+mult_22_5_I4_I6                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_52
+mult_22_5_I4_I6/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_107
+mult_22_5_I4_I7                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_44
+mult_22_5_I4_I7/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_91
+mult_22_5_I4_I8                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_36
+mult_22_5_I4_I8/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_75
+mult_22_5_I4_I9                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_28
+mult_22_5_I4_I9/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_59
+mult_22_5_I5                        162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_63
+mult_22_5_I5/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_127
+mult_22_5_I5_I1                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_91
+mult_22_5_I5_I1/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_185
+mult_22_5_I5_I10                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_19
+mult_22_5_I5_I10/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_41
+mult_22_5_I5_I11                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_11
+mult_22_5_I5_I11/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_25
+mult_22_5_I5_I12                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_3
+mult_22_5_I5_I12/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_9
+mult_22_5_I5_I2                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_83
+mult_22_5_I5_I2/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_169
+mult_22_5_I5_I3                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_75
+mult_22_5_I5_I3/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_153
+mult_22_5_I5_I4                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_67
+mult_22_5_I5_I4/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_137
+mult_22_5_I5_I5                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_59
+mult_22_5_I5_I5/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_121
+mult_22_5_I5_I6                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_51
+mult_22_5_I5_I6/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_105
+mult_22_5_I5_I7                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_43
+mult_22_5_I5_I7/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_89
+mult_22_5_I5_I8                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_35
+mult_22_5_I5_I8/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_73
+mult_22_5_I5_I9                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_27
+mult_22_5_I5_I9/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_57
+mult_22_5_I6                        162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_55
+mult_22_5_I6/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_111
+mult_22_5_I6_I1                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_90
+mult_22_5_I6_I1/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_184
+mult_22_5_I6_I10                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_18
+mult_22_5_I6_I10/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_40
+mult_22_5_I6_I11                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_10
+mult_22_5_I6_I11/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_24
+mult_22_5_I6_I12                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_2
+mult_22_5_I6_I12/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_8
+mult_22_5_I6_I2                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_82
+mult_22_5_I6_I2/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_168
+mult_22_5_I6_I3                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_74
+mult_22_5_I6_I3/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_152
+mult_22_5_I6_I4                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_66
+mult_22_5_I6_I4/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_136
+mult_22_5_I6_I5                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_58
+mult_22_5_I6_I5/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_120
+mult_22_5_I6_I6                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_50
+mult_22_5_I6_I6/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_104
+mult_22_5_I6_I7                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_42
+mult_22_5_I6_I7/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_88
+mult_22_5_I6_I8                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_34
+mult_22_5_I6_I8/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_72
+mult_22_5_I6_I9                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_26
+mult_22_5_I6_I9/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_56
+mult_22_5_I7                        162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_47
+mult_22_5_I7/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_95
+mult_22_5_I7_I1                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_89
+mult_22_5_I7_I1/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_182
+mult_22_5_I7_I10                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_17
+mult_22_5_I7_I10/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_38
+mult_22_5_I7_I11                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_9
+mult_22_5_I7_I11/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_22
+mult_22_5_I7_I12                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_1
+mult_22_5_I7_I12/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_6
+mult_22_5_I7_I2                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_81
+mult_22_5_I7_I2/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_166
+mult_22_5_I7_I3                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_73
+mult_22_5_I7_I3/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_150
+mult_22_5_I7_I4                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_65
+mult_22_5_I7_I4/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_134
+mult_22_5_I7_I5                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_57
+mult_22_5_I7_I5/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_118
+mult_22_5_I7_I6                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_49
+mult_22_5_I7_I6/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_102
+mult_22_5_I7_I7                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_41
+mult_22_5_I7_I7/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_86
+mult_22_5_I7_I8                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_33
+mult_22_5_I7_I8/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_70
+mult_22_5_I7_I9                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_25
+mult_22_5_I7_I9/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_54
+mult_22_5_I8                        162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_39
+mult_22_5_I8/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_79
+mult_22_5_I8_I1                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_88
+mult_22_5_I8_I1/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_181
+mult_22_5_I8_I10                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_16
+mult_22_5_I8_I10/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_37
+mult_22_5_I8_I11                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_8
+mult_22_5_I8_I11/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_21
+mult_22_5_I8_I12                    162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_0
+mult_22_5_I8_I12/FS_1                19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_5
+mult_22_5_I8_I2                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_80
+mult_22_5_I8_I2/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_165
+mult_22_5_I8_I3                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_72
+mult_22_5_I8_I3/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_149
+mult_22_5_I8_I4                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_64
+mult_22_5_I8_I4/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_133
+mult_22_5_I8_I5                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_56
+mult_22_5_I8_I5/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_117
+mult_22_5_I8_I6                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_48
+mult_22_5_I8_I6/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_101
+mult_22_5_I8_I7                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_40
+mult_22_5_I8_I7/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_85
+mult_22_5_I8_I8                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_32
+mult_22_5_I8_I8/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_69
+mult_22_5_I8_I9                     162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_24
+mult_22_5_I8_I9/FS_1                 19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_53
+mult_22_5_I9                        162.2880      0.8    142.3800     0.0000  0.0000  ozcore_simd_int8_DW02_mult_31
+mult_22_5_I9/FS_1                    19.9080      0.1     19.9080     0.0000  0.0000  ozcore_simd_int8_DW01_add_63
+--------------------------------  ----------  -------  ----------  ---------  ------  -----------------------------
+Total                                                  19301.1838     0.0000  0.0000
+
+1

@@ -1,0 +1,44 @@
+ 
+****************************************
+Report : area
+Design : ozcore_control_s1
+Version: O-2018.06-SP1
+Date   : Fri Nov 27 00:10:36 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                            8
+Number of nets:                            17
+Number of cells:                           14
+Number of combinational cells:             10
+Number of sequential cells:                 4
+Number of macros/black boxes:               0
+Number of buf/inv:                          3
+Number of references:                       8
+
+Combinational area:                  4.536000
+Buf/Inv area:                        0.756000
+Noncombinational area:               7.812000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                    12.348000
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+ozcore_control_s1                   12.3480    100.0    4.5360     7.8120  0.0000  ozcore_control_s1
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+Total                                                   4.5360     7.8120  0.0000
+
+1

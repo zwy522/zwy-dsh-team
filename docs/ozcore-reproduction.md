@@ -82,7 +82,7 @@ bash scripts/fig16.sh
 |---|---:|---:|---:|
 | Ten-four INT8（K=128） | **62,969.0 µm²** | 59,901.9 µm² | **1.051×** |
 
-同一份 Ten-four RTL、N=64、300 MHz、DC O-2018.06；面积只差 5.1%，说明 RTL/流程可复现，TSMC 替代用于趋势验证合理。仍不能把 62,969 当作论文绝对面积（库/flow 不同）。FP16 变体正在同流程下综合（需 `VX_lzc`/`VX_wallace_mul`/`VX_find_first`，运行时间明显更长）；OzCore HLS stages 仍需 Catapult + FDSOI 才能精确复现。
+同一份 Ten-four RTL、N=64、300 MHz、DC O-2018.06；面积只差 5.1%，说明 RTL/流程可复现，TSMC 替代用于趋势验证合理。仍不能把 62,969 当作论文绝对面积（库/flow 不同）。FP16 变体未得到可靠结果：`compile_ultra` 运行 25+ 分钟未收敛；`compile -map_effort medium` 产出未映射/generic 报告（`Total cell area 0.000000`，699,828 cells），不能作为面积数据。因此只报告 INT8 的可靠替代结果；OzCore HLS stages 仍需 Catapult + FDSOI 才能精确复现。
 
 ## 3. 结果
 

@@ -1,0 +1,11 @@
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Nov 26 23:59 2026
+CORE_S1: errors=0
+CORE_S1: PASS
+$finish called from file "core_s1/tb/tb_core_s1.sv", line 36.
+$finish at simulation time                76000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 76000 ps
+CPU Time:      0.210 seconds;       Data structure size:   0.1Mb
+Thu Nov 26 23:59:42 2026
