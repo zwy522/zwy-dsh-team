@@ -1,0 +1,111 @@
+ 
+****************************************
+Report : area
+Design : ozcore_crt_seq_s1
+Version: O-2018.06-SP1
+Date   : Fri Nov 27 11:26:34 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp40p140ffg0p99v0c_ccs (File: /home/host/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs/tcbn28hpcplusbwp40p140ffg0p99v0c_ccs.db)
+
+Number of ports:                         7573
+Number of nets:                         40318
+Number of cells:                        29276
+Number of combinational cells:          29076
+Number of sequential cells:               133
+Number of macros/black boxes:               0
+Number of buf/inv:                       1256
+Number of references:                     119
+
+Combinational area:              26061.335976
+Buf/Inv area:                      316.512005
+Noncombinational area:             251.747998
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 26313.083974
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  -------------------------------
+ozcore_crt_seq_s1                 26313.0840    100.0    866.2500   251.7480  0.0000  ozcore_crt_seq_s1
+add_44_C57_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_50
+add_44_C57_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_25
+add_44_C58_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_42
+add_44_C58_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_17
+add_44_C59_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_34
+add_44_C59_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_9
+add_45_C57_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_48
+add_45_C57_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_23
+add_45_C58_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_40
+add_45_C58_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_15
+add_45_C59_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_32
+add_45_C59_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_7
+add_46_C57_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_46
+add_46_C57_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_21
+add_46_C58_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_38
+add_46_C58_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_13
+add_46_C59_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_30
+add_46_C59_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_5
+add_47_C57_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_44
+add_47_C57_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_19
+add_47_C58_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_36
+add_47_C58_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_11
+add_47_C59_C92                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_28
+add_47_C59_C93                       49.1400      0.2     49.1400     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_3
+add_96                              204.4980      0.8    204.4980     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_1
+mult_44_C57_C92                     189.0000      0.7    189.0000     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_25
+mult_44_C57_C93                     188.7480      0.7    188.7480     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_12
+mult_44_C58_C92                     188.7480      0.7    188.7480     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_21
+mult_44_C58_C93                     188.7480      0.7    188.7480     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_8
+mult_44_C59_C92                     188.7480      0.7    188.7480     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_17
+mult_44_C59_C93                     188.7480      0.7    188.7480     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_4
+mult_45_C57_C92                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_24
+mult_45_C57_C93                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_11
+mult_45_C58_C92                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_20
+mult_45_C58_C93                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_7
+mult_45_C59_C92                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_16
+mult_45_C59_C93                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_3
+mult_46_C57_C92                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_23
+mult_46_C57_C93                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_10
+mult_46_C58_C92                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_19
+mult_46_C58_C93                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_6
+mult_46_C59_C92                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_15
+mult_46_C59_C93                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_2
+mult_47_C57_C92                     808.6680      3.1    808.6680     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_22
+mult_47_C57_C93                     808.6680      3.1    808.6680     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_9
+mult_47_C58_C92                     808.6680      3.1    808.6680     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_18
+mult_47_C58_C93                     808.6680      3.1    808.6680     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_5
+mult_47_C59_C92                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_14
+mult_47_C59_C93                     808.5420      3.1    808.5420     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_1
+mult_93                             509.0400      1.9    509.0400     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_13
+mult_95                            6720.9659     25.5   6621.5519     0.0000  0.0000  ozcore_crt_seq_s1_DW02_mult_0
+mult_95/FS_1                         99.4140      0.4     99.4140     0.0000  0.0000  ozcore_crt_seq_s1_DW01_add_2
+r795                                199.0800      0.8    199.0800     0.0000  0.0000  ozcore_crt_seq_s1_DW01_addsub_0
+sll_72_C100                          89.5860      0.3     89.5860     0.0000  0.0000  ozcore_crt_seq_s1_DW01_ash_0
+srl_71_S2_C100                      113.0220      0.4    113.0220     0.0000  0.0000  ozcore_crt_seq_s1_DW_rash_0
+sub_48_C57_C92                       17.7660      0.1     17.7660     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_11
+sub_48_C57_C93                       17.7660      0.1     17.7660     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_6
+sub_48_C58_C92                       17.7660      0.1     17.7660     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_10
+sub_48_C58_C93                       17.7660      0.1     17.7660     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_5
+sub_48_C59_C92                       51.7860      0.2     51.7860     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_9
+sub_48_C59_C93                       51.7860      0.2     51.7860     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_4
+sub_56_C92                           50.4000      0.2     50.4000     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_12
+sub_56_C93                           50.4000      0.2     50.4000     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_7
+sub_60_C92                           57.5820      0.2     57.5820     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_8
+sub_60_C93                           57.5820      0.2     57.5820     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_3
+sub_67_S2_C100                       50.1480      0.2     50.1480     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_1
+sub_94_S2                            51.7860      0.2     51.7860     0.0000  0.0000  ozcore_crt_seq_s1_DW01_sub_2
+--------------------------------  ----------  -------  ----------  ---------  ------  -------------------------------
+Total                                                  26061.3360   251.7480  0.0000
+
+1

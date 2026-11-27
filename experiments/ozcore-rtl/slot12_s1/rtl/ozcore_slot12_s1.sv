@@ -45,20 +45,21 @@ module ozcore_slot12_s1 #(parameter int K=128) (
 
     logic [3:0] pass;
     logic signed [31:0] dots [12];
-    logic signed [95:0] crt96;
     logic [K*32-1:0] dots_flat;
-    logic [31:0] fp_comb;
+    logic crt_start, crt_busy;
+    logic [31:0] crt_fp;
+    logic crt_valid;
     int acc;
     integer j;
 
-    assign busy = (pass != 0) || out_valid;
+    assign busy = (pass != 0) || crt_busy;
 
     always_ff @(posedge clk) begin
         if (rst) begin
-            pass <= 0; out_valid <= 1'b0;
+            pass <= 0; crt_start <= 1'b0;
             for (int t=0; t<12; t++) dots[t] <= '0;
         end else if (start && pass == 0) begin
-            out_valid <= 1'b0;
+            crt_start <= 1'b0;
             pass <= 1;
         end else if (pass != 0) begin
             acc = 0;
@@ -68,17 +69,18 @@ module ozcore_slot12_s1 #(parameter int K=128) (
             dots[pass-1] <= acc;
             if (pass == 12) begin
                 pass <= 0;
-                out_valid <= 1'b1;
+                crt_start <= 1'b1;
             end else begin
                 pass <= pass + 1;
             end
-        end else begin
-            out_valid <= 1'b0;
-        end
+        end else crt_start <= 1'b0;
     end
 
     always_comb begin
         for (int t=0; t<12; t++) dots_flat[t*32 +: 32] = dots[t];
     end
-    ozcore_crt_int2fp_s1 u_crt (.dots(dots_flat), .fp_out(fp_out), .crt_out(crt96));
+    ozcore_crt_seq_s1 u_crt (.clk(clk), .rst(rst), .start(crt_start), .dots(dots_flat),
+                             .fp_out(crt_fp), .out_valid(crt_valid), .busy(crt_busy));
+    assign fp_out = crt_fp;
+    assign out_valid = crt_valid;
 endmodule

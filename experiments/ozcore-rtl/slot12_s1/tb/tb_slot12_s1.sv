@@ -13,7 +13,7 @@ module tb_slot12_s1;
         for (case_i=0; case_i<5; case_i++) begin
             if ($fscanf(fd,"%h %h %h\n",w,x,exp_fp) != 3) $fatal;
             start=1; @(posedge clk); #1; start=0;
-            repeat (12) @(posedge clk); #1;
+            repeat (25) @(posedge clk); #1;
             if (!out_valid || fp !== exp_fp) begin
                 errs++; $display("SLOT12 FAIL case%0d valid=%b got=%h exp=%h",case_i,out_valid,fp,exp_fp);
             end

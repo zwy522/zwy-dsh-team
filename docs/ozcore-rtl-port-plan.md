@@ -166,6 +166,14 @@ VCS：pre/post/MAC/lane **全部通过**。16,384 MAC 整 top DC 仍不可行（
 - DC `report_area` 未完成（mapping 后进程退出）；最后 compile 表面积约 **49,763 µm²**，比旧 `%` 版 35,172.65 更大；Horner 乘法器需要共享/流水。
 - 单 slot 下界：27,831.51+49,763=**77,594.5 µm²**；×128=**9.93 mm²**（比行为级 CRT 的 8.06 mm² 更差）。
 
+## 5.9 CRT 去除法 + 12-cycle 共享（论文式）
+
+- `ozcore_crt_int2fp_s1.sv` 用 `red16`（comp=256-m，Horner）替代 `%`。
+- `ozcore_crt_seq_s1.sv` 用**一个** red16/mod32 + 一个 96×8 乘法，12 个 modulus 串行 12 拍完成；slot 接这个顺序 CRT。
+- VCS 数据 5/5 与 golden 一致；`out_valid` 仍有一处 off-by-one 采样。
+- 面积：共享 CRT **26,313.08 µm² / 29,276 cells**（并行去除法版 49,763，约小 47%）。
+- 单 slot 下界 27,831.51+26,313.08=**54,144.59 µm²**；×128=**6.93 mm²**；加 128 个 weight preprocess（约 0.36 mm²）≈**7.29 mm²**；仍高于 6.03，control/aligner 未计。
+
 ## 6. 预计工期（缩减 INT8 全加速器）
 
 以“K=8、N=4、S_MAX=12、INT8 主路径、单个 OzCore 实例”为目标，按当前已验证的 RTL/VCS/DC 流程估算（工作日，非承诺）：
